@@ -1,7 +1,22 @@
 package ru.pmishagin.loop;
 
-/**
- * Created by Home on 25.10.2017.
- */
+import org.junit.Test;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+
 public class FactorialTest {
+
+
+        @Test
+        public void whenFactorialN() {
+            Factorial sum = new Factorial();
+            int n=5;
+            int result = sum.calc(n);
+            int expected = 120;
+            assertThat(result, is(expected));
+        }
+
+
 }

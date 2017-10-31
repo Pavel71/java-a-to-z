@@ -1,4 +1,4 @@
-package ru.pmishagin.Array;
+package ru.pmishagin.array;
 
 import java.util.Arrays;
 
@@ -12,31 +12,32 @@ import java.util.Arrays;
 
 public class Turn {
 
+    /**
+     * Метод back, переворачивает массив.
+     * @param array массив.
+     * @return перевернутый массив.
+     */
 
-    public static void main(String[] args) {
+    public int[] back(int[] array) {
 
 
-        int[] numbers = new int[]{1,2,3,4,5};
-
-       int result = 0;
+        for (int i = 0; i<array.length/2;i++) {
 
 
-        for (int i=0;i<numbers.length / 2;i++) {
+            int c = array[i];
 
-             int c = numbers[numbers.length - 1 - i];
-            numbers[numbers.length - 1 - i] = numbers[i];
-            numbers[i] = c;
+            array[i] = array[array.length -1 - i];
 
-             System.out.println(numbers[i]);
+            array[array.length -1 - i] = c;
+
+
         }
-
-
-
-
-
-
+        return array;
 
     }
+
+
+
 }
 
 

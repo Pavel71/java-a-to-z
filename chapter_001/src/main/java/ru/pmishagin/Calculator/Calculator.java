@@ -1,7 +1,8 @@
-package ru.pmishagin.calculator;
+package ru.pmishagin.сalculator;
 
 
 public class Calculator {
+
     private double result;
 
     public void add(double first, double second) {
@@ -10,17 +11,17 @@ public class Calculator {
 
     public void subtract (double first,double second){
 
-          this.result = first - second;
+        this.result = first - second;
     }
 
     public void div (double first,double second){
 
-          this.result = first / second;
+        this.result = first / second;
     }
 
-    public void Multipli (double first,double second){
+    public void multipli (double first,double second){
 
-          this.result = first * second;
+        this.result = first * second;
     }
 
 

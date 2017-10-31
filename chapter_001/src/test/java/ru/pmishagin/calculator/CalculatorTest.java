@@ -1,4 +1,4 @@
-package ru.pmishagin.calculator;
+package ru.pmishagin.сalculator;
 
 import org.junit.Test;
 

@@ -1,7 +1,19 @@
 package ru.pmishagin.loop;
 
-/**
- * Created by Home on 24.10.2017.
- */
-public class CounterTest {
-}
+import org.junit.Test;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+    public class CounterTest {
+
+
+        @Test
+        public void whenSumdiv2StartFinsh() {
+            Counter sum = new Counter();
+            int result = sum.add(1, 5);
+            int expected = 6;
+            assertThat(result, is(expected));
+        }
+
+    }
