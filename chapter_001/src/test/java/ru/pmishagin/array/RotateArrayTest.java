@@ -1,7 +1,68 @@
 package ru.pmishagin.array;
 
+
+import java.util.Arrays;
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
 /**
- * Created by Home on 31.10.2017.
+ * Test.
+ *
+ * @author Pavel Mishagin (mailto:raz_3@mail.ru)
+ * @version $1.0$
+ * @since 01.11.2017
  */
+
+
+
 public class RotateArrayTest {
+
+    @Test
+
+    public void RotateTwoArraay33(){
+
+
+        RotateArray rotatetest = new RotateArray();
+
+        int[][] arr = {{1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int[][] result = rotatetest.rotate(arr);
+
+        int[][] expectedArray= {{7, 4, 1},
+                {8, 5, 2},
+                {9, 6, 3}
+        };
+
+
+        assertArrayEquals(result, expectedArray);
+
+    }
+    @Test
+    public void RotateTwoArraay22(){
+
+
+        RotateArray rotatetest = new RotateArray();
+
+        int[][] arr =  {{1, 2,},
+                        {4, 5,},
+
+        };
+
+        int[][] result = rotatetest.rotate(arr);
+
+        int[][] expectedArray= {{4,1},
+                                {5, 2},
+
+        };
+
+
+        assertArrayEquals(result, expectedArray);
+
+    }
+
+
+
 }
