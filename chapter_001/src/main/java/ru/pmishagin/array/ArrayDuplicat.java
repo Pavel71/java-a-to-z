@@ -38,6 +38,7 @@ public class ArrayDuplicat{
                     array[in]=array[unique-1]; // то меняем местами с последним
 
                     unique--;
+                    in--;
 
                  }
 

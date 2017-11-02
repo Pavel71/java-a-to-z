@@ -21,14 +21,14 @@ import java.util.Arrays;
 
       public void Dublicatebackclean() {
 
-        String[] num = {"1","1","3","3"};
+        String[] num = {"1","1","3","3","2","2","1"};
 
 
         ArrayDuplicat dubl = new ArrayDuplicat();
 
         String[] result = dubl.remove(num);
 
-        String[] expected = {"1","3"};
+        String[] expected = {"1","2","3"};
 
         assertArrayEquals(result, expected);
 
