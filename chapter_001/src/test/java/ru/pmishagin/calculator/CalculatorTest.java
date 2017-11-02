@@ -17,6 +17,7 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+    @Test
     public void whenSubtractThreeMinusOneThenTwo() {
 
         Calculator calc = new Calculator();
@@ -25,6 +26,7 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+    @Test
     public void whenDivFourDivisionTwoThenTwo() {
 
         Calculator calc = new Calculator();
@@ -33,6 +35,7 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+    @Test
     public void whenMultipliOneMultiplitcationTwoThenTwo() {
 
         Calculator calc = new Calculator();
