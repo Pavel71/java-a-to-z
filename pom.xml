@@ -2,12 +2,13 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>pmishagin</groupId>
-    <artifactId>chapter_001</artifactId>
+    <artifactId>java-a-to-z</artifactId>
     <packaging>pom</packaging>
     <version> 1.0</version>
 
     <modules>
         <module>chapter_001</module>
+        <module>chapter_002</module>
     </modules>
 
     <properties>

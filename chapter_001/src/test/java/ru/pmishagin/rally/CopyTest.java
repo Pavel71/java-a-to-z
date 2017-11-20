@@ -18,9 +18,9 @@ public class CopyTest {
 
         Copy arr = new Copy();
 
-        int [] result = arr.copyPartArray(CopyTest,2);
+        int [] result = arr.copyPartArray(CopyTest,1);
 
-        int[] expected = {3,4,5};
+        int[] expected = {1,2,3,4,5};
 
         assertArrayEquals(result, expected);
 

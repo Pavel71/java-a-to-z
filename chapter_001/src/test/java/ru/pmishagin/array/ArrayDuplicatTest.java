@@ -7,6 +7,9 @@ import static org.junit.Assert.assertThat;
 import java.util.Arrays;
 
 
+
+
+
 /**
  * Test.
  *
@@ -21,14 +24,14 @@ import java.util.Arrays;
 
       public void Dublicatebackclean() {
 
-        String[] num = {"1","1","3","3","2","2","1"};
+        String[] num = {"1","1","3","3","2","2","1","5"};
 
 
         ArrayDuplicat dubl = new ArrayDuplicat();
 
         String[] result = dubl.remove(num);
 
-        String[] expected = {"1","2","3"};
+        String[] expected = {"1","5","3","2"};
 
         assertArrayEquals(result, expected);
 

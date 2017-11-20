@@ -37,15 +37,17 @@ public class ArrayDuplicat{
 
                     array[in]=array[unique-1]; // то меняем местами с последним
 
-                    unique--;
-                    in--;
+                    unique--;//В конце дубликаты так что можно уменьшатьконец
+                    in--;//Делаем возврат цикла на 1 что не попасть на дубликат в конце
 
                  }
 
             }
 
         }
-        return Arrays.copyOf(array,unique);//Копируем исходный массив отрезая дубликаты
+         return Arrays.copyOf(array,unique);//Копируем исходный массив отрезая дубликаты
+
+
 
 
     }
