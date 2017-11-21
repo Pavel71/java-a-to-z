@@ -18,12 +18,12 @@ public class Profession {
     public String specialization;
     public String profession;
 
-    public Profession(){
+    public Profession() {
 
 
     }
 
-    public Profession(String name,String diplom,String specialization,String profession,int expiriencework,int age){
+    public Profession(String name, String diplom, String specialization, String profession, int expiriencework, int age) {
 
         this.name = name;
         this.diplom = diplom;
@@ -34,52 +34,52 @@ public class Profession {
 
 
     }
-    public String tostring(){
+    public String tostring() {
 
-        return "My name " + name + " ,me  " + age+" years"+ " ,i am a "+profession + " my specializaion "+ specialization + " and expiriance "+ expiriencework+ " years!";
+        return "My name " + name + " ,me  " + age + " years" + " ,i am a " + profession + " my specializaion " + specialization + " and expiriance " + expiriencework + " years!";
     }
 
-    public void givsum(){
+    public void givsum() {
 
         System.out.println("I giv summ");
     }
 
-    public void gotowork(){
+    public void gotowork() {
 
         System.out.println("I go to work ");
     }
 
-    public String getName(Profession profession){
+    public String getName(Profession profession) {
 
         System.out.println("Hello! My name " + name);
 
         return name;
     }
-    public String getDiplom(){
+    public String getDiplom() {
 
         System.out.println("Hello! My diplom " + diplom);
 
         return diplom;
     }
-    public String getSpecialization(){
+    public String getSpecialization() {
 
         System.out.println("Hello! My specialization " + specialization);
 
         return specialization;
     }
-    public String getProfession(){
+    public String getProfession() {
 
         System.out.println("Hello! My profession " + profession);
 
         return profession;
     }
-    public int getExpiriencework(){
+    public int getExpiriencework() {
 
-        System.out.println("Hello! My expiriance " + expiriencework+ "years");
+        System.out.println("Hello! My expiriance " + expiriencework + "years");
 
         return expiriencework;
     }
-    public int getAge(){
+    public int getAge() {
 
         System.out.println("Hello! My age " + age + "years");
 

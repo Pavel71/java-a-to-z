@@ -2,7 +2,13 @@ package ru.pmishagin.start;
 
 import ru.pmishagin.models.*;
 import java.util.*;
-
+/**
+ *  Tracker.
+ *
+ * @author Pavel Mishagin (mailto:raz_3@mail.ru)
+ * @version 0.1
+ * @since 18.11.2017
+ */
 
 /**
  * В данном классе хранятся все заявки.
@@ -12,16 +18,16 @@ import java.util.*;
 
 public class Tracker {
 
-   private Item[] items = new Item[10];/////Массив объектов Items Заменяет базу данных//////////
-   private int position = 0;////////Это по сути накопение количества заявок или задач/////////
-   private static final Random RN = new Random();////Cтатическая константа для генераци случаного айди/////
+   private Item[] items = new Item[10]; /////Массив объектов Items Заменяет базу данных//////////
+   private int position = 0; ////////Это по сути накопение количества заявок или задач/////////
+   private static final Random RN = new Random(); ////Cтатическая константа для генераци случаного айди/////
 
 
 
 
 ////////////Метод добавляет заявки в виде строк///////////////
 
-   public Item add(Item item){
+   public Item add(Item item) {
 
        item.setId(this.generateId()); ////////////Метод генерирует случайное число и переводит его в строку(ID)
 
@@ -32,14 +38,16 @@ public class Tracker {
 
    /////////////////////////Метод поиска заявок c помощью id////////////
 
-   protected Item findById(String id){
+   protected Item findById(String id) {
 
        Item result = null;
 
-       for (Item item :items){
-           if(item !=null && item.getId().equals(id)){
+       for (Item item :items) {
+
+           if (item != null && item.getId().equals(id)) {
 
                result = item;
+
                break;
            }
 
@@ -50,20 +58,20 @@ public class Tracker {
 
    //////////////Метод генерирует Случайное число и преобразует его в строку/////////////////////
 
-   String generateId(){
+   String generateId() {
 
        return String.valueOf(System.currentTimeMillis() + RN.nextInt(100));
    }
 
    ////////////////Этот метод выводит только те элементы из массива которые вставленнны/////////
 
-   public Item[] getAll(){
+   public Item[] getAll() {
 
-       Item []result = new Item[position];
+       Item[] result = new Item[position];
 
-       for (int index=0;index!=this.position;index++){
+       for (int index = 0; index != this.position; index++) {
 
-           if(items[index]!=null) {
+           if (items[index] != null) {
 
                result[index] = this.items[index];
            }
@@ -74,7 +82,7 @@ public class Tracker {
        /////////Метод поиска всех заявок/////////
    }
 
-   public int getPosition(){
+   public int getPosition() {
 
        return this.position;
    }
@@ -86,13 +94,13 @@ public class Tracker {
 
    //////Метод обновляет данные в завяке(Работает с массивом)//////////
 
-   public void update(Item item){
+   public void update(Item item) {
 
-       for(int index = 0;index<items.length;index++){
+       for (int index = 0; index < items.length; index++) {
 
-           if(items[index].getId().equals(item.getId())){
+           if (items[index].getId().equals(item.getId())) {
 
-               items[index]=item;
+               items[index] = item;
 
                break;
            }
@@ -103,9 +111,9 @@ public class Tracker {
 
    /////////////////////////Метод удаления заявок/////////////////
 
-    public void delete(Item item){
+    public void delete(Item item) {
 
-       for(int index = 0;index<items.length;index++) {
+       for (int index = 0; index < items.length; index++) {
 
            if (items[index].getId().equals(item.getId())) {
 
@@ -119,15 +127,16 @@ public class Tracker {
 
     ////////////////////////Получение списка по имени///////////////
 
-   public Item findByName(String key){
+   public Item findByName(String key) {
 
         Item result = null;
 
-        for(int index = 0;index<items.length;index++){
+        for (int index = 0; index < items.length; index++) {
 
-            if(items[index].name.equals(key)){
+            if (items[index].name.equals(key)) {
 
                 result = items[index];
+
                 break;
             }
 

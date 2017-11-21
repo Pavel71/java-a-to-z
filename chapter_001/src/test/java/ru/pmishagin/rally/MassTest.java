@@ -18,9 +18,9 @@ public class MassTest {
 
     @Test
 
-    public void FactorialArrayTest(){
+    public void facArrayTest() {
 
-        int arr [] ={1,2,3,4,5};
+        int[] arr = {1, 2, 3, 4, 5};
 
         Mass mas = new Mass();
 
@@ -29,9 +29,6 @@ public class MassTest {
         int expected = 120;
 
         assertThat(result, is(expected));
-
-
-
 
     }
 

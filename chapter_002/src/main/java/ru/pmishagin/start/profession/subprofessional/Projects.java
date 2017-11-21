@@ -14,7 +14,7 @@ public class Projects extends Profession {
 
     public int price;
 
-    public Projects(String name, String specialization, int age,int price) {
+    public Projects(String name, String specialization, int age, int price) {
 
         this.name = name;
         this.specialization = specialization;
@@ -23,7 +23,7 @@ public class Projects extends Profession {
 
     }
 
-    public int getPrice(){
+    public int getPrice() {
 
         return price;
     }

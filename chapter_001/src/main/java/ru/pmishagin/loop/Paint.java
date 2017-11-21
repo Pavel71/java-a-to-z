@@ -25,13 +25,13 @@ public class Paint {
 
     public String piramid(int height) {
 
-        StringBuilder piramid = new StringBuilder();//обращаемся к методу Stringbilder
+        StringBuilder piramid = new StringBuilder(); //обращаемся к методу Stringbilder
 
         int width = 2 * height - 1;
 
         for (int y = 0; y < height; y++) {
 
-            int widthLevel = y * 2 + 1;//основание пирамиды
+            int widthLevel = y * 2 + 1; //основание пирамиды
 
             int left = (width - widthLevel) / 2;
 

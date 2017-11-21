@@ -19,7 +19,7 @@ public class RotateArrayTest {
 
     @Test
 
-    public void RotateTwoArraay33(){
+    public void rotateTwoArray33() {
 
 
         RotateArray rotatetest = new RotateArray();
@@ -31,7 +31,7 @@ public class RotateArrayTest {
 
         int[][] result = rotatetest.rotate(arr);
 
-        int[][] expectedArray= {{7, 4, 1},
+        int[][] expectedArray = {{7, 4, 1},
                 {8, 5, 2},
                 {9, 6, 3}
         };
@@ -40,29 +40,29 @@ public class RotateArrayTest {
         assertArrayEquals(result, expectedArray);
 
     }
+
     @Test
-    public void RotateTwoArraay22(){
+
+    public void rotateTwoArray22() {
 
 
         RotateArray rotatetest = new RotateArray();
 
-        int[][] arr =  {{1, 2,},
-                        {4, 5,},
+        int[][] arr =  {{1, 2},
+                {4, 5},
 
         };
 
         int[][] result = rotatetest.rotate(arr);
 
-        int[][] expectedArray= {{4,1},
-                                {5, 2},
+        int[][] expectedArray = {{4, 1},
+                {5, 2},
 
         };
-
 
         assertArrayEquals(result, expectedArray);
 
     }
-
 
 
 }

@@ -10,6 +10,7 @@ import static org.junit.Assert.assertThat;
 
         @Test
         public void whenSumdiv2StartFinsh() {
+
             Counter sum = new Counter();
             int result = sum.add(1, 5);
             int expected = 6;

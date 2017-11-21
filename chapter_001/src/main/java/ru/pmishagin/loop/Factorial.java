@@ -6,11 +6,9 @@ package ru.pmishagin.loop;
 public class Factorial {
 
 
-    public int calc (int n) {
+    public int calc(int n) {
 
-
-
-    int result=1;
+        int result = 1;
 
 
         for (int i = 1; i <= n; i++) {
@@ -18,12 +16,7 @@ public class Factorial {
             result = result * i;
         }
 
-
         return result;
-
-
     }
-
-
 
 }

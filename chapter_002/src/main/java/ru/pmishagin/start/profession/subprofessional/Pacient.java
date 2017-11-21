@@ -14,14 +14,14 @@ public class Pacient extends Profession {
     public String diagnos;
 
 
-    public Pacient(String name, int age,String diagnos) {
+    public Pacient(String name, int age, String diagnos) {
 
         this.name = name;
         this.age = age;
         this.diagnos = diagnos;
 
     }
-    public String getDiagnos(){
+    public String getDiagnos() {
 
         return diagnos;
     }

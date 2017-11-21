@@ -16,9 +16,11 @@ public class BoardTest {
         * Test.
         */
     @Test
+
     public void whenTwoThenLittleBoard() {
+
         Board board = new Board();
-        String result = board.paint(6,4);
+        String result = board.paint(6, 4);
         System.out.println(result);
         assertThat(board.paint(6, 4), is(String.format(" X X X\r\nX X X \r\n X X X\r\nX X X \r\n", System.lineSeparator())));
     }
@@ -29,7 +31,9 @@ public class BoardTest {
 
     @Test
     public void whenFourToFiveThenBigBoard() {
+
         Board board = new Board();
-        assertThat(board.paint(4, 5), is(String.format("X X \r\n X X\r\nX X \r\n X X\r\nX X \r\n", System.lineSeparator())));
+
+        assertThat(board.paint(4, 5), is(String.format(" X X\r\nX X \r\n X X\r\nX X \r\n X X\r\n", System.lineSeparator())));
     }
 }

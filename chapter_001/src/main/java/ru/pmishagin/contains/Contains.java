@@ -38,7 +38,9 @@ public class Contains {
                         break;
                     }
                 }
-                if (cont) break;
+                if (cont) {
+                    break;
+                }
             }
             return cont;
         }

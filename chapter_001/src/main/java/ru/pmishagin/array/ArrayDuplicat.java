@@ -19,7 +19,7 @@ import java.util.Arrays;
 
 
 
-public class ArrayDuplicat{
+public class ArrayDuplicat {
 
 
 
@@ -29,23 +29,24 @@ public class ArrayDuplicat{
 
 
 
-        for (int out = 0; out < unique; out++){ //Внешний цикл
+        for (int out = 0; out < unique; out++) { //Внешний цикл
 
-            for(int in = out+1;in<unique;in++){ //Внутренний цикл
+            for (int in = out + 1; in < unique; in++) { //Внутренний цикл
 
-                 if(array[out].equals(array[in])){ //Если 2 значения равны
+                 if (array[out].equals(array[in])) { //Если 2 значения равны
 
-                    array[in]=array[unique-1]; // то меняем местами с последним
+                    array[in] = array[unique - 1]; // то меняем местами с последним
 
-                    unique--;//В конце дубликаты так что можно уменьшатьконец
-                    in--;//Делаем возврат цикла на 1 что не попасть на дубликат в конце
+                    unique--; //В конце дубликаты так что можно уменьшатьконец
+
+                    in--; //Делаем возврат цикла на 1 что не попасть на дубликат в конце
 
                  }
 
             }
 
         }
-         return Arrays.copyOf(array,unique);//Копируем исходный массив отрезая дубликаты
+         return Arrays.copyOf(array, unique); //Копируем исходный массив отрезая дубликаты
 
 
 

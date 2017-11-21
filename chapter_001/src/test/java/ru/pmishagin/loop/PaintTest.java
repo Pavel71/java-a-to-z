@@ -21,9 +21,11 @@ public class PaintTest {
     */
 
     @Test
+
     public void whenTwoThenLittleBoard() {
+
         Paint piramid = new Paint();
-        String result = piramid.piramid( 3);
+        String result = piramid.piramid(3);
         System.out.println(result);
         assertThat(piramid.piramid(3), is(String.format("  ^  \r\n ^^^ \r\n^^^^^\r\n", System.lineSeparator())));
     }

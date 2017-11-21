@@ -1,62 +1,52 @@
 package ru.pmishagin.rally;
 
 
-
-
-
-
 public class Mass {
 
-
-    int [] a;
-
+    int[] a;
     int n;
 
-
-    public static  void main(String [] args){
-
+    public static void main(String[] args) {
 
         Mass array = new Mass();
-
 
     }
 
     //Метод инициализатор
 
-   // int setName( int [] arr, int n){
+    // int setName( int [] arr, int n){
 
-      //  a = this.
+    //  a = this.
 
 
 
-   // }
+    // }
 
 
 
 //Метод наполняющий массив
 
-  //  int  filing(int n,int fil []){
+    //  int  filing(int n,int fil []){
 
-       // for(int i = 0;i<n;i++){
+    // for(int i = 0;i<n;i++){
 
-           // fil[i] = i+1;
+    // fil[i] = i+1;
 
-      //  } return fil;
+    //  } return fil;
 
 
     //}
     //Метод считающий факториал
 
-    int factorial(int factor []){
+    int factorial(int[] factor) {
 
         int sum = 1;
 
-        for(int x : factor){
+        for (int x : factor) {
+
             sum *= x;
 
-
-
-        }return sum;
+        } return sum;
 
     }
 

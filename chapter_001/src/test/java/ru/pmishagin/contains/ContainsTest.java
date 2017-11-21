@@ -20,7 +20,7 @@ public class ContainsTest {
 
     @Test
 
-    public void EqualsTwoString(){
+    public void equTwoString() {
 
 
         String origin = "Привет";
@@ -29,21 +29,12 @@ public class ContainsTest {
 
         Contains cont = new Contains();
 
-        boolean result = cont.contains(origin ,sub);
+        boolean result = cont.contains(origin, sub);
 
         boolean expected = true;
 
         assertThat(result, is(expected));
 
-
-
-
-
-
     }
-
-
-
-
 
 }

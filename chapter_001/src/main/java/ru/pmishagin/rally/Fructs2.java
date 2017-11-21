@@ -18,30 +18,27 @@ public class Fructs2 {
 
     void summ(int a) {
 
-        System.out.println("Это метод с 1ой переменной " +a);
+        System.out.println("Это метод с 1ой переменной " + a);
 
 
     }
-    void summ(int a,int b) {
+    void summ(int a, int b) {
 
-        System.out.println("Это метод с 2мя переменными " + a +" и " + b);
+        System.out.println("Это метод с 2мя переменными " + a + " и " + b);
 
 
     }
 
-    int summ(int a,int b,int o) {
+    int summ(int a, int b, int o) {
 
-       int sum = a + b + o;
+        int sum = a + b + o;
 
-       return sum;
-
-
-
+        return sum;
 
     }
 
 }
-class Fructs2Demo{
+class Fructs2Demo {
 
     public static void main(String[] args) {
 
@@ -51,14 +48,11 @@ class Fructs2Demo{
 
         ob1.summ(26);
 
-       ob1.summ(11,22);
+        ob1.summ(11, 22);
 
-       sum = ob1.summ(11,22,33);
+        sum = ob1.summ(11, 22, 33);
 
         System.out.println(sum);
-
-
-
 
     }
 }

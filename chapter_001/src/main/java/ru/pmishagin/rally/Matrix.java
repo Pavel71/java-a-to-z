@@ -1,4 +1,4 @@
-package ru.pmishagin.array;
+package ru.pmishagin.rally;
 
 /**
  *  Massif class.
@@ -11,35 +11,34 @@ package ru.pmishagin.array;
 
 public class Matrix {
 
+    public static void main(String[] args) {
 
-        public static void main(String[] args) {
+        int[][] matrixB = {
+                {-9, 1, 0, 4, 6},
+                {4, 1, 1},
+                //{-2,2,-1}
+        };
+        System.out.println(matrixB[0].length);
 
-            int[][] matrixB = {
-                    {-9,1,0,4,6},
-                    {4,1,1},
-                    //{-2,2,-1}
-            };
-            System.out.println(matrixB[0].length);
-
-           // for(int i = 0; i<matrixB.length; i++){
-
-
-               // for (int j = 0; j<matrixB.length; j++){
-
-                //    System.out.print(matrixB[i][j] + " ");
-              //  }
-               // System.out.println();
-            //}
+        // for(int i = 0; i<matrixB.length; i++){
 
 
+        // for (int j = 0; j<matrixB.length; j++){
 
-            //for (int i = 0; i < 3; i++) {
-               // for (int j = 0; j < 3; j++) {
-                   // System.out.print(matrixB[i][j] + "\t");
-                //}
+        //    System.out.print(matrixB[i][j] + " ");
+        //  }
+        // System.out.println();
+        //}
 
-                //System.out.println(matrixB[0][1]);
-            //}
-        }
+
+
+        //for (int i = 0; i < 3; i++) {
+        // for (int j = 0; j < 3; j++) {
+        // System.out.print(matrixB[i][j] + "\t");
+        //}
+
+        //System.out.println(matrixB[0][1]);
+        //}
+    }
 
 }

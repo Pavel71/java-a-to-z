@@ -10,9 +10,11 @@ import static org.junit.Assert.assertThat;
  * @version $1.0$
  * @since 30.10.2017
  */
+
 public class TurnTest {
 
     @Test
+
     public void whenArrFromOneToTen() {
 
         Turn turn = new Turn();

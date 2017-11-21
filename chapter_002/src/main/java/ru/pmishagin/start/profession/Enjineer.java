@@ -9,7 +9,7 @@ import ru.pmishagin.start.profession.subprofessional.Projects;
  * @version 0.1
  * @since 08.11.2017
  */
-public class Enjineer extends Profession{
+public class Enjineer extends Profession {
 
 
     public Enjineer(String name, String diplom, String specialization, String profession, int expiriencework, int age) {
@@ -22,7 +22,7 @@ public class Enjineer extends Profession{
         this.profession = profession;
     }
 
-    public int getPrice(Projects projects){
+    public int getPrice(Projects projects) {
 
 
         return projects.price;

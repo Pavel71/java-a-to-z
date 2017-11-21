@@ -3,7 +3,7 @@ package ru.pmishagin.condition;
 
 public class Fibo {
 
-    public static void main (String  args []) {
+    public static void main(String[] args) {
 
         int i;
         int a = 1;
@@ -11,7 +11,6 @@ public class Fibo {
         int c;
 
         for (i = 0; i < 10; i++) {
-
 
             c = a + b;
             a = b;

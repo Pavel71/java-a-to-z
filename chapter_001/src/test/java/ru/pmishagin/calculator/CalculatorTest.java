@@ -1,4 +1,4 @@
-package ru.pmishagin.сalculator;
+package ru.pmishagin.calculator;
 
 import org.junit.Test;
 
@@ -17,7 +17,9 @@ public class CalculatorTest {
         double expected = 2D;
         assertThat(result, is(expected));
     }
+
     @Test
+
     public void whenSubtractThreeMinusOneThenTwo() {
 
         Calculator calc = new Calculator();

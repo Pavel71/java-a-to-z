@@ -15,7 +15,7 @@ import ru.pmishagin.start.profession.subprofessional.Pacient;
      int healingpeople;
 
 
-    public Doctor(int healingpeople,String name,String diplom,String specialization,String profession,int expiriencework,int age){
+    public Doctor(int healingpeople, String name, String diplom, String specialization, String profession, int expiriencework, int age) {
 
         this.name = name;
         this.diplom = diplom;
@@ -26,7 +26,7 @@ import ru.pmishagin.start.profession.subprofessional.Pacient;
         this.healingpeople = healingpeople;
     }
 
-    public String healingpacient(Pacient pacient){
+    public String healingpacient(Pacient pacient) {
 
 
         return pacient.diagnos;
@@ -34,7 +34,7 @@ import ru.pmishagin.start.profession.subprofessional.Pacient;
     }
 
 
-    public void givsum(){
+    public void givsum() {
 
         System.out.println("Doc giv summ");
 

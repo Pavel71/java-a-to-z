@@ -1,26 +1,45 @@
 package ru.pmishagin.start;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import com.sun.prism.shader.Solid_Color_AlphaTest_Loader;
-import com.sun.security.auth.SolarisNumericUserPrincipal;
 import ru.pmishagin.models.*;
+import ru.pmishagin.start.interfaces.Input;
 
 
 /**
+ *
+ * Class для запуска программы,здесь находится статик маин
  * Created by Home on 10.11.2017.
  */
+
+
 public class StartUI {
 
-    public static void main (String [] args){
+    private Input input;
 
-     Tracker tracker = new Tracker();
+    public StartUI(Input input) {
 
+        this.input = input;
+    }
 
+    public void init() {
 
-       // for(Item item : tracker.getAll()){
+        String name = input.ask("Please Task name: ");
 
-        //System.out.println(item4.name);
-    // }
+        Tracker tracker = new Tracker();
+
+        tracker.add(new Task(name, "First Desc"));
+
+        for (Item item : tracker.getAll()) {
+
+            System.out.println(item.getName());
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Input input = new ConsoleInput();
+
+        new StartUI(input).init();
 
     }
 }

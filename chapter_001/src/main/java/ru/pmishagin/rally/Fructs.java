@@ -10,12 +10,10 @@ package ru.pmishagin.rally;
 
 public class Fructs {
 
-
     int apple;
     int orange;
     int bananas;
     int[] gum;
-
 
 
     Fructs(int a, int o, int b) {
@@ -24,18 +22,15 @@ public class Fructs {
         this.orange = o;
         this.bananas = b;
 
-
     }
     //Перегрузка конструктора(Разными вариантами)
 
     Fructs() {
 
         // Это делается чтобы создавать пустые конструкторы
-         apple = -1;
-         orange = -1;
-         bananas = -1;
-
-
+        apple = -1;
+        orange = -1;
+        bananas = -1;
 
     }
 
@@ -44,33 +39,27 @@ public class Fructs {
 
         return apple + orange + bananas;
 
-
     }
 
 }
-    class FructsDemo{
+class FructsDemo {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            Fructs ob1 = new Fructs(25,32,33);
+        Fructs ob1 = new Fructs(25, 32, 33);
 
-            Fructs ob2 = new Fructs();
+        Fructs ob2 = new Fructs();
 
-            Fructs ob3 = new Fructs(37,32,22);
+        Fructs ob3 = new Fructs(37, 32, 22);
 
-            int sum;
+        int sum;
 
-             sum = ob1.summ();
+        sum = ob1.summ();
 
-            System.out.println(sum); //смотрим на сумму
+        System.out.println(sum); //смотрим на сумму
 
-
-
-
-
-
-        }
     }
+}
 
 
 

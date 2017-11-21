@@ -6,18 +6,17 @@ package ru.pmishagin.models;
 public class Item {
 
     private String id; //////////Это уникальный номер для заявки не имеет отношения к индексу массива!!!!/////////
-    public String name;///Имя заявки///
-    public String description;///Описание заявки////
+    public String name; ///Имя заявки///
+    public String description; ///Описание заявки////
     public long create;
 
 
-
-    public Item(){
+    public Item() {
 
 
     }
 
-    public Item(String name,String description, long create){
+    public Item(String name, String description, long create) {
 
         this.name = name;
         this.create = create;
@@ -26,12 +25,12 @@ public class Item {
     }
     ////////////////Гетеры и Сетеры для id//////////////
 
-    public String getId(){
+    public String getId() {
 
         return this.id;
     }
 
-    public String setId(String id){
+    public String setId(String id) {
 
         this.id = id;
 
@@ -39,18 +38,20 @@ public class Item {
     }
 
 
-    public String getName(){
+    public String getName() {
 
         return name;
 
     }
-    public String getDescription(){
+
+    public String getDescription() {
 
         return  description;
 
 
     }
-    public long getCreate(){
+
+    public long getCreate() {
 
         return create;
     }

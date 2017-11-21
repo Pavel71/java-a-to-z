@@ -3,9 +3,10 @@ package ru.pmishagin.rally;
 
 public class Loops {
 
-    public static void main (String [] args){
+    public static void main(String[] args) {
 
         boolean expression = true;
+
         int counter = 0;
 
     /* while(expression){
@@ -28,14 +29,16 @@ public class Loops {
      System.out.println("finish loop do while ");
      */
 
-    for( int index = 0; index<10;index++){
+        for (int index = 0; index < 10; index++) {
 
-        if (index % 2 == 0){
-            continue;
+            if (index % 2 == 0) {
+
+                continue;
+            }
+
+            System.out.println("for : " + index);
         }
-        System.out.println("for : "+ index);
-    }
-    System.out.println("finish for ");
+        System.out.println("finish for ");
 
 
      /*for (String arg : args){
@@ -45,7 +48,6 @@ public class Loops {
 
      System.out.println("For Massiv args ");
      */
-
 
     }
 

@@ -14,12 +14,12 @@ public class TrackerTest {
 
     @Test
 
-   public void whenAddNewItemThenTrackerHasSameItem(){
+   public void whenAddNewItemThenTrackerHasSameItem() {
 
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa","Pepa",1234L);
+        Item item1 = new Item("Pupa", "Pepa", 1234L);
 
         tracker.add(item1);
 
@@ -30,63 +30,8 @@ public class TrackerTest {
 
     @Test
 
-    public void WhenSearchItemforId(){
+    public void whenSearchItemForId() {
 
-
-        Tracker tracker = new Tracker();
-
-        Item item1 = new Item("Pupa","Pepa",1234L);
-
-        tracker.add(item1);
-
-        assertThat(tracker.findById(item1.getId()),is(item1));
-
-    }
-
-    @Test
-
-
-    public void WhenItemUpdate(){
-
-        Tracker tracker = new Tracker();
-
-        Item item1 = new Item("Pupa","Pepa",1234L);
-
-        tracker.add(item1);
-
-        Item item2 = new Item("Muma","Mema",23213L);
-
-        tracker.add(item2);
-
-        item2.setId(item1.getId());
-
-        tracker.update(item2);
-
-        assertThat(tracker.findById(item1.getId()).getName(),is("Muma"));
-
-
-    }
-
-    @Test
-
-    public void WhendellItemnull(){
-
-        Tracker tracker = new Tracker();
-
-        Item item1 = new Item("Pupa","Pepa",1234L);
-
-        tracker.add(item1);
-
-        tracker.delete(item1);
-
-        assertThat(null,is(tracker.getAll()[0]));
-
-
-    }
-
-    @Test
-
-    public void WhenSearcItebyName() {
 
         Tracker tracker = new Tracker();
 
@@ -94,7 +39,62 @@ public class TrackerTest {
 
         tracker.add(item1);
 
-        assertThat(tracker.getAll()[0],is(tracker.findByName("Pupa")));
+        assertThat(tracker.findById(item1.getId()), is(item1));
+
+    }
+
+    @Test
+
+
+    public void whenItemUpdate() {
+
+        Tracker tracker = new Tracker();
+
+        Item item1 = new Item("Pupa", "Pepa", 1234L);
+
+        tracker.add(item1);
+
+        Item item2 = new Item("Muma", "Mema", 23213L);
+
+        tracker.add(item2);
+
+        item2.setId(item1.getId());
+
+        tracker.update(item2);
+
+        assertThat(tracker.findById(item1.getId()).getName(), is("Muma"));
+
+
+    }
+
+    @Test
+
+    public void whendellItemnull() {
+
+        Tracker tracker = new Tracker();
+
+        Item item1 = new Item("Pupa", "Pepa", 1234L);
+
+        tracker.add(item1);
+
+        tracker.delete(item1);
+
+        assertThat(null, is(tracker.getAll()[0]));
+
+
+    }
+
+    @Test
+
+    public void whenSearcItebyName() {
+
+        Tracker tracker = new Tracker();
+
+        Item item1 = new Item("Pupa", "Pepa", 1234L);
+
+        tracker.add(item1);
+
+        assertThat(tracker.getAll()[0], is(tracker.findByName("Pupa")));
 
     }
 

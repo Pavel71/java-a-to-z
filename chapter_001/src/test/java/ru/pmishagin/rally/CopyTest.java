@@ -9,18 +9,16 @@ public class CopyTest {
 
     @Test
 
-    public void Whencopy1(){
+    public void whenCopy1() {
 
-
-
-        int[] CopyTest ={1,2,3,4,5};
+        int[] copytest = {1, 2, 3, 4, 5};
 
 
         Copy arr = new Copy();
 
-        int [] result = arr.copyPartArray(CopyTest,1);
+        int[] result = arr.copyPartArray(copytest, 1);
 
-        int[] expected = {1,2,3,4,5};
+        int[] expected = {2, 3, 4, 5};
 
         assertArrayEquals(result, expected);
 

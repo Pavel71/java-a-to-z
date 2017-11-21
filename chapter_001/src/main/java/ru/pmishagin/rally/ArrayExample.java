@@ -10,7 +10,7 @@ package ru.pmishagin.rally;
 
 public class ArrayExample {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
     /* String[] values = new String[10];
 
@@ -35,27 +35,38 @@ public class ArrayExample {
 
         }*/
 
-       User[] users = new User[5];
-       users[0] = new User("Pavel");
+        User[] users = new User[5];
+
+        users[0] = new User("Pavel");
+
         users[1] = new User("Mark");
+
         users[2] = new User("Vladimir");
+
         users[3] = new User("Julia");
+
         users[4] = new User("Petr");
 
-                User user = ArrayExample.findByName(users,"Mark");
-                        System.out.println(user.name);
+        User user = ArrayExample.findByName(users, "Mark");
+
+        System.out.println(user.name);
 
     }
 
 
-    public static User findByName(User[] users,String name){
+    public static User findByName(User[] users, String name) {
+
         User result = null;
+
         for (User user : users) {
+
             if (name.equals(user.name)) {
+
                 result = user;
+
                 break;
             }
-        }return result;
+        } return result;
     }
 }
 

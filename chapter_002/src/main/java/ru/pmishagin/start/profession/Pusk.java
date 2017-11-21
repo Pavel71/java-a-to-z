@@ -13,25 +13,24 @@ import ru.pmishagin.start.profession.subprofessional.*;
 
 
 
-public class Pusk{
+public class Pusk {
 
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Profession prof = new Profession();
 
-        Doctor doc = new Doctor(5,"Boris","TulGY","Kardiolog","Doctor",5,45);
+        Doctor doc = new Doctor(5, "Boris", "TulGY", "Kardiolog", "Doctor", 5, 45);
 
-        Pacient pac = new Pacient("Tramp",55,"Shiza");
+        Pacient pac = new Pacient("Tramp", 55, "Shiza");
 
-        Enjineer enj = new Enjineer("Pavel","TulGY","Electrosnab","Enjineer",1,35);
+        Enjineer enj = new Enjineer("Pavel", "TulGY", "Electrosnab", "Enjineer", 1, 35);
 
-        Projects proj = new Projects("Tower","Bilding",0,10000000);
+        Projects proj = new Projects("Tower", "Bilding", 0, 10000000);
 
-        Teacher teach = new Teacher("Julia","TPY","Languager","Teacher",6,28);
+        Teacher teach = new Teacher("Julia", "TPY", "Languager", "Teacher", 6, 28);
 
-        Students stud = new Students("Vladimir","2 course","Biologi",20);
+        Students stud = new Students("Vladimir", "2 course", "Biologi", 20);
 
         test(pac);
 
@@ -41,7 +40,7 @@ public class Pusk{
 
 
 
-    public static void test (Profession profession){
+    public static void test(Profession profession) {
 
        profession.givsum();
 

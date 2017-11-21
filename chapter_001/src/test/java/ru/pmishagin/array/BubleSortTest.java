@@ -14,15 +14,16 @@ import static org.junit.Assert.assertThat;
 public class BubleSortTest {
 
     @Test
-    public void BublesortIfmaxmin() {
+
+    public void bubSortIfMaxMin() {
 
         BubleSort buble = new BubleSort();
 
-        int[] array = {5,2,8,12,9,7};
+        int[] array = {5, 2, 8, 12, 9, 7};
 
         int[] result = buble.sort(array);
 
-        int[] expected = {2,5,7,8,9,12};
+        int[] expected = {2, 5, 7, 8, 9, 12};
 
         assertThat(result, is(expected));
     }

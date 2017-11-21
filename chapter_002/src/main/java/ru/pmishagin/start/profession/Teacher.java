@@ -11,7 +11,7 @@ import ru.pmishagin.start.profession.subprofessional.*;
 public class Teacher extends Profession {
 
 
-    public Teacher(){
+    public Teacher() {
 
 
     }
@@ -27,7 +27,7 @@ public class Teacher extends Profession {
         this.profession = profession;
     }
 
-    public String knoeledjteach (Students students){
+    public String knoeledjteach(Students students) {
 
         return students.name;
     }

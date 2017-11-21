@@ -1,4 +1,4 @@
-package ru.pmishagin.Array;
+package ru.pmishagin.rally;
 
 import java.util.Arrays;
 
@@ -13,14 +13,17 @@ public class Massif {
 
     public static void main(String[] args) {
 
-        int[] mas ={1, 2, 3, 4, 5, 6, 7};
+        int[] mas = {1, 2, 3, 4, 5, 6, 7};
 
-        if(mas[mas.length-1]>mas[0]){
+        if (mas[mas.length - 1] > mas[0]) {
 
-            int c  = mas[0];
-            mas[0] = mas[mas.length-1];
-            mas[mas.length-1] = c;
+            int c = mas[0];
 
-        }System.out.println(Arrays.toString(mas));
+            mas[0] = mas[mas.length - 1];
+
+            mas[mas.length - 1] = c;
+
+        }
+        System.out.println(Arrays.toString(mas));
     }
 }
