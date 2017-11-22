@@ -11,7 +11,7 @@ import ru.pmishagin.start.interfaces.Input;
  */
 /**
  *
- *
+ *  Класс отвечает за вывод и сохранение информации
  *
  */
 public class StubInput implements Input {
@@ -24,6 +24,9 @@ public class StubInput implements Input {
         this.answers = answers;
     }
 
+    /////////Переопределям метод интерфейса//////
+
+    @Override
     public String ask(String question) {
 
         return answers[position++];

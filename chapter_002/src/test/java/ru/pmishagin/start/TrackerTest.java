@@ -19,7 +19,7 @@ public class TrackerTest {
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa", "Pepa", 1234L);
+        Item item1 = new Item("Pupa", "Pepa");
 
         tracker.add(item1);
 
@@ -35,7 +35,7 @@ public class TrackerTest {
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa", "Pepa", 1234L);
+        Item item1 = new Item("Pupa", "Pepa");
 
         tracker.add(item1);
 
@@ -50,11 +50,11 @@ public class TrackerTest {
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa", "Pepa", 1234L);
+        Item item1 = new Item("Pupa", "Pepa");
 
         tracker.add(item1);
 
-        Item item2 = new Item("Muma", "Mema", 23213L);
+        Item item2 = new Item("Muma", "Mema");
 
         tracker.add(item2);
 
@@ -73,7 +73,7 @@ public class TrackerTest {
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa", "Pepa", 1234L);
+        Item item1 = new Item("Pupa", "Pepa");
 
         tracker.add(item1);
 
@@ -90,13 +90,14 @@ public class TrackerTest {
 
         Tracker tracker = new Tracker();
 
-        Item item1 = new Item("Pupa", "Pepa", 1234L);
+        Item item1 = new Item("Pupa", "Pepa");
 
         tracker.add(item1);
 
         assertThat(tracker.getAll()[0], is(tracker.findByName("Pupa")));
 
     }
+
 
 
 }

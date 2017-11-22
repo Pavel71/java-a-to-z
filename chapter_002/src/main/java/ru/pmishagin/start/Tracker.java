@@ -1,5 +1,6 @@
 package ru.pmishagin.start;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import ru.pmishagin.models.*;
 import java.util.*;
 /**
@@ -78,13 +79,19 @@ public class Tracker {
        }
        return result;
 
-
-       /////////Метод поиска всех заявок/////////
    }
 
-   public int getPosition() {
 
-       return this.position;
+    /////////Метод вывода всех заявок/////////
+
+   public void showAllItem() {
+
+       for (int i = 0; i < position; i++) {
+
+           System.out.println("------------ Все заявки --------------");
+
+           System.out.println(" Name : " + items[i].getName() + " " + "Description: " + items[i].description + " " + "Id: " + items[i].getId());
+       }
    }
 
    /**

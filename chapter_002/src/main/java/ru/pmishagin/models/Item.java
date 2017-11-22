@@ -8,7 +8,7 @@ public class Item {
     private String id; //////////Это уникальный номер для заявки не имеет отношения к индексу массива!!!!/////////
     public String name; ///Имя заявки///
     public String description; ///Описание заявки////
-    public long create;
+
 
 
     public Item() {
@@ -16,10 +16,10 @@ public class Item {
 
     }
 
-    public Item(String name, String description, long create) {
+    public Item(String name, String description) {
 
         this.name = name;
-        this.create = create;
+
         this.description = description;
 
     }
@@ -51,9 +51,5 @@ public class Item {
 
     }
 
-    public long getCreate() {
-
-        return create;
-    }
 
 }

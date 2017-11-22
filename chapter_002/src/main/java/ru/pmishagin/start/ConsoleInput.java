@@ -22,7 +22,9 @@ public class ConsoleInput implements Input {
 
     private Scanner scanner = new Scanner(System.in);
 
+    /////////Переопределям метод интерфейса//////
 
+    @Override
     public String ask(String question) {
 
         System.out.print(question);

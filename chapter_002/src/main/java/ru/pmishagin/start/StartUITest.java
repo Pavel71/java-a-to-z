@@ -1,5 +1,9 @@
 package ru.pmishagin.start;
+import com.sun.org.apache.xpath.internal.SourceTree;
+import ru.pmishagin.models.Item;
 import ru.pmishagin.start.interfaces.Input;
+
+import java.util.Arrays;
 
 /**
  *  Input intrface.
@@ -17,10 +21,6 @@ public class StartUITest {
 
     public static void main(String[] args) {
 
-        Input input = new StubInput(new String[]{"Create stub task"});
-
-
-        new StartUI(input).init();
 
     }
 
