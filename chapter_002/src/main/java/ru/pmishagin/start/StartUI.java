@@ -22,7 +22,7 @@ public class StartUI {
     private final Input input;
 
     /**
-     * Константа меню для добавления новой заявки.
+     * Константы меню.
      */
     private static final String ADD = "0";
 
@@ -61,15 +61,19 @@ public class StartUI {
         new StartUI(new ConsoleInput(), new Tracker()).init();
 
     }
+
+    /**
+     * Выводит доступные операции
+     */
     private void showMenu() {
 
         System.out.println("Меню." + "\n" + "0. Add new Item" + "\n" +  "1. Show all items" + "\n" + "2. Edit item" + "\n"
-               + "3. Delete item" + "\n" + "4. Find item by Id" + "\n" + "5. Find items by name" + "\n" + "6. Exit Program");
+                + "3. Delete item" + "\n" + "4. Find item by Id" + "\n" + "5. Find items by name" + "\n" + "6. Exit Program");
 
     }
 
     /**
-     * Метод реализует добавленяи новый заявки в хранилище.ADD
+     * Метод реализует добавленяи новый заявки в хранилище.ADD = 0
      */
     private void createItem() {
 
@@ -80,6 +84,11 @@ public class StartUI {
         this.tracker.add(item);
         System.out.println("------------ Новая заявка с getId : " + item.getId() + "-----------");
     }
+
+
+    /**
+     * Метод реализует обновление заявки.EDIT = 2
+     */
     private void updateItem() {
 
         System.out.println("------------ Обновение заявки --------------");
@@ -96,6 +105,10 @@ public class StartUI {
 
         System.out.println("------------ Заявка обновленна -----------");
     }
+
+    /**
+     * Метод удаляет заявку.DEL = 3
+     */
 
     private void deleteItem() {
 
@@ -114,6 +127,10 @@ public class StartUI {
 
     }
 
+    /**
+     * Метод ищет заявку по id.ID = 4
+     */
+
     private void findItemID() {
 
         System.out.println("------------ Поиск заявки по ID --------------");
@@ -125,6 +142,10 @@ public class StartUI {
         System.out.println("------------ Поиск завершон --------------");
 
     }
+
+    /**
+     * Метод ищет заявку по Ключу.NAME = 5
+     */
     private void findItemName() {
 
         System.out.println("------------ Поиск заявки по Name --------------");
@@ -137,7 +158,9 @@ public class StartUI {
 
     }
 
-
+    /**
+     * Метод меню.Содержит цикл.
+     */
     public void init() {
 
         boolean exit = false;

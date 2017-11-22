@@ -25,8 +25,12 @@ public class Tracker {
 
 
 
+    /**
+     * Метод добавляет заявку в массив items
+     * @param item
+     * @return
+     */
 
-////////////Метод добавляет заявки в виде строк///////////////
 
    public Item add(Item item) {
 
@@ -37,7 +41,11 @@ public class Tracker {
        return item;
    }
 
-   /////////////////////////Метод поиска заявок c помощью id////////////
+    /**
+     * Метод ищет заявку по id
+     * @param id
+     * @return
+     */
 
    protected Item findById(String id) {
 
@@ -57,24 +65,32 @@ public class Tracker {
 
    }
 
-   //////////////Метод генерирует Случайное число и преобразует его в строку/////////////////////
+    /**
+     * Метод генерирует случайное число из текущего времени(милисекунды) + рандомный инт
+     * @return
+     */
 
    String generateId() {
+
+       //valueOf преобразует инт в строку
 
        return String.valueOf(System.currentTimeMillis() + RN.nextInt(100));
    }
 
-   ////////////////Этот метод выводит только те элементы из массива которые вставленнны/////////
+    /**
+     * Метод выводит те значения которыые не равны null
+     * @return
+     */
 
    public Item[] getAll() {
 
-       Item[] result = new Item[position];
+       Item[] result = new Item[position]; //Массив чистых заявок
 
        for (int index = 0; index != this.position; index++) {
 
            if (items[index] != null) {
 
-               result[index] = this.items[index];
+               result[index] = this.items[index]; //присваиваем массив чистых завок нашей базе
            }
        }
        return result;
@@ -82,7 +98,9 @@ public class Tracker {
    }
 
 
-    /////////Метод вывода всех заявок/////////
+    /**
+     * Метод выводит на экран все заявки которые есть в массиве
+     */
 
    public void showAllItem() {
 
@@ -94,12 +112,10 @@ public class Tracker {
        }
    }
 
-   /**
-    * param Item items[]
-
-    */
-
-   //////Метод обновляет данные в завяке(Работает с массивом)//////////
+    /**
+     * Метод заменяет старую заявку на новую с помощь id
+     * @param item
+     */
 
    public void update(Item item) {
 
@@ -116,7 +132,10 @@ public class Tracker {
 
    }
 
-   /////////////////////////Метод удаления заявок/////////////////
+    /**
+     * Метод находи нужжную заявку по id и присваивает ей null
+     * @param item
+     */
 
     public void delete(Item item) {
 
@@ -132,7 +151,12 @@ public class Tracker {
        }
     }
 
-    ////////////////////////Получение списка по имени///////////////
+    /**
+     *
+     * Поиск заявки о ключу.
+     * @param key
+     * @return
+     */
 
    public Item findByName(String key) {
 
