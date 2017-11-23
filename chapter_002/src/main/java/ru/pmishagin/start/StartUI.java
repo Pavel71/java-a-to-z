@@ -57,8 +57,16 @@ public class StartUI {
 
     public static void main(String[] args) {
 
+        ConsoleInput input = new ConsoleInput();
 
-        new StartUI(new ConsoleInput(), new Tracker()).init();
+        Tracker tracker = new Tracker();
+
+        StartUI startUI = new StartUI(input, tracker);
+
+        startUI.init();
+
+
+        //new StartUI(new ConsoleInput(), new Tracker()).init(); //Эта запись сделана с помощью полиморфизма
 
     }
 
@@ -114,13 +122,9 @@ public class StartUI {
 
         System.out.println("------------ Удаление заявки --------------");
 
-        Item item = new Item("Dell", "Dell");
-
         String id = this.input.ask("Введите ID заявки которую хотите удалить! :");
 
-        item.setId(id);
-
-        tracker.delete(item);
+        tracker.delete(tracker.findById(id));
 
         System.out.println("------------ Заявка удаленна -----------");
 
