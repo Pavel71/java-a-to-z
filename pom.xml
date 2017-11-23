@@ -9,6 +9,8 @@
     <modules>
         <module>chapter_001</module>
         <module>chapter_002</module>
+        <module>practica</module>
+
     </modules>
 
     <properties>
