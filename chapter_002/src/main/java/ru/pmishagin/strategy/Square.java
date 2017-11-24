@@ -9,6 +9,13 @@ import ru.pmishagin.interfaces.Shape;
  */
 public class Square implements Shape {
 
+    /**
+     *
+     * Переопределяем метод интерфейса!
+     * С помощью Стринг билдера и метода Аппенд добавляяем строки таким образом чтобы получился квадрат
+     * @return
+     */
+
     @Override
     public String pic() {
 

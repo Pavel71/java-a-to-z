@@ -13,6 +13,12 @@ import static org.junit.Assert.assertThat;
  * @since 23.11.2017
  */
 public class PaintTest {
+    /**
+     *
+     * Тестирует метод Paint Чтобы понять как рисуется картинка мы преобразуем данные в байт код
+     * и сравниваем их с картинкой
+     *
+     */
 
     @Test
     public void whenDrawSquare() {

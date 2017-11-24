@@ -23,6 +23,9 @@ public class StartUI {
     /**
      * Константы меню.
      */
+
+    private static final int EXIT = 6;
+    /*
     private static final String ADD = "0";
 
     private static final String SHOWALL = "1";
@@ -36,7 +39,7 @@ public class StartUI {
     private static final String NAME = "5";
 
     private static final String EXIT = "6";
-
+    */
 
     /**
      * Хранилище заявок.
@@ -56,22 +59,23 @@ public class StartUI {
 
     public static void main(String[] args) {
 
-        ConsoleInput input = new ConsoleInput();
+       // ConsoleInput input = new ConsoleInput();
 
-        Tracker tracker = new Tracker();
+        //Tracker tracker = new Tracker();
 
-        StartUI startUI = new StartUI(input, tracker);
+       // StartUI startUI = new StartUI(input, tracker);
 
-        startUI.init();
+       // startUI.init();
 
 
-        //new StartUI(new ConsoleInput(), new Tracker()).init(); //Эта запись сделана с помощью полиморфизма
+        new StartUI(new ConsoleInput(), new Tracker()).init(); //Эта запись сделана с помощью полиморфизма
 
     }
 
+    /*
     /**
      * Выводит доступные операции
-     */
+
     private void showMenu() {
 
         System.out.println("Меню." + "\n" + "0. Add new Item" + "\n" +  "1. Show all items" + "\n" + "2. Edit item" + "\n"
@@ -81,21 +85,21 @@ public class StartUI {
 
     /**
      * Метод реализует добавленяи новый заявки в хранилище.ADD = 0
-     */
+
     private void createItem() {
 
-        System.out.println("------------ Добавление новой заявки --------------");
+
         String name = this.input.ask("Введите имя заявки :");
         String desc = this.input.ask("Введите описание заявки :");
         Item item = new Item(name, desc);
         this.tracker.add(item);
-        System.out.println("------------ Новая заявка с getId : " + item.getId() + "-----------");
+
     }
 
 
     /**
      * Метод реализует обновление заявки.EDIT = 2
-     */
+
     private void updateItem() {
 
         System.out.println("------------ Обновение заявки --------------");
@@ -115,7 +119,7 @@ public class StartUI {
 
     /**
      * Метод удаляет заявку.DEL = 3
-     */
+
 
     private void deleteItem() {
 
@@ -132,7 +136,7 @@ public class StartUI {
 
     /**
      * Метод ищет заявку по id.ID = 4
-     */
+
 
     private void findItemID() {
 
@@ -148,7 +152,7 @@ public class StartUI {
 
     /**
      * Метод ищет заявку по Ключу.NAME = 5
-     */
+
     private void findItemName() {
 
         System.out.println("------------ Поиск заявки по Name --------------");
@@ -164,7 +168,25 @@ public class StartUI {
     /**
      * Метод меню.Содержит цикл.
      */
+
     public void init() {
+
+        Tracker tracker = new Tracker();
+        MenuTracker menu = new MenuTracker(this.input, this.tracker);
+        menu.fillActions();
+
+        int key = EXIT;
+
+        do {
+
+            menu.show();
+            key = Integer.valueOf(input.ask("Введите номер нужной операции: "));
+            menu.select(key);
+
+        } while (key != EXIT);
+
+
+        /*
 
         boolean exit = false;
 
@@ -209,7 +231,7 @@ public class StartUI {
 
             }
 
-        }
+        }*/
 
     }
 }
