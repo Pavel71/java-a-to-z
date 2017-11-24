@@ -1,4 +1,4 @@
-package ru.pmishagin.start.interfaces;
+package ru.pmishagin.interfaces;
 
 /**
  *  Input intrface.

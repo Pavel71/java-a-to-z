@@ -1,8 +1,7 @@
 package ru.pmishagin.start;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import ru.pmishagin.models.*;
-import ru.pmishagin.start.interfaces.Input;
+import ru.pmishagin.interfaces.Input;
 
 
 /**

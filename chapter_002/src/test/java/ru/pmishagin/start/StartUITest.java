@@ -2,7 +2,7 @@ package ru.pmishagin.start;
 
 import ru.pmishagin.models.*;
 
-import ru.pmishagin.start.interfaces.Input;
+import ru.pmishagin.interfaces.Input;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

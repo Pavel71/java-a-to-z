@@ -1,6 +1,6 @@
 package ru.pmishagin.start;
 
-import ru.pmishagin.start.interfaces.Input;
+import ru.pmishagin.interfaces.Input;
 
 import java.util.*;
 
