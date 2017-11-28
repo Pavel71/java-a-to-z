@@ -13,6 +13,8 @@ import ru.pmishagin.interfaces.Input;
 
 public class StartUI {
 
+
+
     /**
      * Поле инпут для работы с классами стаб и консоль
      *
@@ -24,22 +26,8 @@ public class StartUI {
      * Константы меню.
      */
 
-    private static final int EXIT = 6;
-    /*
-    private static final String ADD = "0";
 
-    private static final String SHOWALL = "1";
 
-    private static final String EDIT = "2";
-
-    private static final String DEL = "3";
-
-    private static final String ID = "4";
-
-    private static final String NAME = "5";
-
-    private static final String EXIT = "6";
-    */
 
     /**
      * Хранилище заявок.
@@ -59,179 +47,34 @@ public class StartUI {
 
     public static void main(String[] args) {
 
-       // ConsoleInput input = new ConsoleInput();
 
-        //Tracker tracker = new Tracker();
-
-       // StartUI startUI = new StartUI(input, tracker);
-
-       // startUI.init();
-
-
-        new StartUI(new ConsoleInput(), new Tracker()).init(); //Эта запись сделана с помощью полиморфизма
+        new StartUI(new ValidateInput(), new Tracker()).init(); //Эта запись сделана с помощью полиморфизма
 
     }
-
-    /*
-    /**
-     * Выводит доступные операции
-
-    private void showMenu() {
-
-        System.out.println("Меню." + "\n" + "0. Add new Item" + "\n" +  "1. Show all items" + "\n" + "2. Edit item" + "\n"
-                + "3. Delete item" + "\n" + "4. Find item by Id" + "\n" + "5. Find items by name" + "\n" + "6. Exit Program");
-
-    }
-
-    /**
-     * Метод реализует добавленяи новый заявки в хранилище.ADD = 0
-
-    private void createItem() {
-
-
-        String name = this.input.ask("Введите имя заявки :");
-        String desc = this.input.ask("Введите описание заявки :");
-        Item item = new Item(name, desc);
-        this.tracker.add(item);
-
-    }
-
-
-    /**
-     * Метод реализует обновление заявки.EDIT = 2
-
-    private void updateItem() {
-
-        System.out.println("------------ Обновение заявки --------------");
-
-        String name = this.input.ask("Введите имя новой заявки :");
-        String desc = this.input.ask("Введите описание новой заявки :");
-        Item item = new Item(name, desc);
-
-        String id = this.input.ask("Введите ID старой заявки :");
-
-        item.setId(id);
-
-        tracker.update(item);
-
-        System.out.println("------------ Заявка обновленна -----------");
-    }
-
-    /**
-     * Метод удаляет заявку.DEL = 3
-
-
-    private void deleteItem() {
-
-        System.out.println("------------ Удаление заявки --------------");
-
-        String id = this.input.ask("Введите ID заявки которую хотите удалить! :");
-
-        tracker.delete(tracker.findById(id));
-
-        System.out.println("------------ Заявка удаленна -----------");
-
-
-    }
-
-    /**
-     * Метод ищет заявку по id.ID = 4
-
-
-    private void findItemID() {
-
-        System.out.println("------------ Поиск заявки по ID --------------");
-
-        Item result = tracker.findById(this.input.ask("Введите ID"));
-
-        System.out.println(" Name : " + result.getName() + " " + "Description: " + result.description);
-
-        System.out.println("------------ Поиск завершон --------------");
-
-    }
-
-    /**
-     * Метод ищет заявку по Ключу.NAME = 5
-
-    private void findItemName() {
-
-        System.out.println("------------ Поиск заявки по Name --------------");
-
-        Item result = tracker.findByName(this.input.ask("Введите Name"));
-
-        System.out.println(" Name : " + result.getName() + " " + "Description: " + result.description + " " + "Id: " + result.getId());
-
-        System.out.println("------------ Поиск завершон --------------");
-
-    }
-
-    /**
-     * Метод меню.Содержит цикл.
-     */
 
     public void init() {
 
-        Tracker tracker = new Tracker();
         MenuTracker menu = new MenuTracker(this.input, this.tracker);
         menu.fillActions();
 
-        int key = EXIT;
+        int[] ranges = menu.getRange();
+
+        int key;
 
         do {
 
             menu.show();
-            key = Integer.valueOf(input.ask("Введите номер нужной операции: "));
+            //key = Integer.valueOf(input.ask("Введите номер нужной операции: "));
+            //menu.select(key);
+
+            key = input.ask("Выберете: ", ranges);
+
             menu.select(key);
 
-        } while (key != EXIT);
+        } while (key != 6);
 
 
-        /*
 
-        boolean exit = false;
-
-        while (!exit) {
-
-            this.showMenu();
-
-            String answer = this.input.ask("Введите пункт меню : ");
-
-            if (ADD.equals(answer)) {
-                //Добавление заявки в этом методе
-                this.createItem();
-
-            } else if (SHOWALL.equals(answer)) {
-
-                tracker.showAllItem();
-
-
-            } else if (EDIT.equals(answer)) {
-
-                this.updateItem();
-
-
-            } else if (DEL.equals(answer)) {
-
-                this.deleteItem();
-
-
-            } else if (ID.equals(answer)) {
-
-                this.findItemID();
-
-
-            } else if (NAME.equals(answer)) {
-
-                this.findItemName();
-
-
-            } else if (EXIT.equals(answer)) {
-
-                exit = true;
-
-            }
-
-        }*/
 
     }
 }

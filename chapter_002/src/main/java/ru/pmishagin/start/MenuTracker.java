@@ -34,10 +34,20 @@ public class MenuTracker {
         this.tracker = tracker;
     }
 
+
+    /**
+     *
+     *Массив для хранения значений для выявления ошибок!
+     */
+
+    private int[] ranges = new int[] {0, 1, 2, 3, 4, 5, 6};
+
     /**
      *Метод инициализурет ключи для команд в массиве actuions
      * Удобно его использовать для цикла
      */
+
+
 
     public void fillActions() {
 
@@ -76,6 +86,11 @@ public class MenuTracker {
             }
 
         }
+    }
+
+    public int[] getRange() {
+
+        return this.ranges;
     }
          //////////////////////////////////////Class////////////////////////////
     /**
@@ -180,13 +195,22 @@ public class MenuTracker {
 
             Item item = new Item(name, desc);
 
+
             String id = input.ask("Insert id : ");
 
-            item.setId(id);
+            if (tracker.findById(id) == null) { // проверка на случай отсутствия заявки
 
-            tracker.update(item);
+                System.out.println("------------ Заявка не найдена ------------");
 
-            System.out.println("------------ Item update! ------------");
+            } else {
+
+
+                item.setId(id);
+
+                tracker.update(item);
+
+                System.out.println("------------ Item update! ------------");
+            }
 
 
         }
@@ -223,9 +247,16 @@ public class MenuTracker {
 
             String id = input.ask("Item id : ");
 
-            tracker.delete(tracker.findById(id));
+            if (tracker.findById(id) == null) { // проверка на случай отсутствия заявки
 
-            System.out.println("------------ Item delete! ------------");
+                System.out.println("------------ Заявка не найдена ------------");
+
+            } else {
+
+                tracker.delete(tracker.findById(id));
+
+                System.out.println("------------ Item delete! ------------");
+            }
 
 
         }
@@ -262,10 +293,17 @@ public class MenuTracker {
 
             String id = input.ask("Введите id заявки которую хотите найти : ");
 
+            if (tracker.findById(id) == null) { // проверка на случай отсутствия заявки
 
-            System.out.println("Имя заявки : " + tracker.findById(id).getName() + " Описание заявки : " + tracker.findById(id).getDescription() + " ID заявки " + id);
+                System.out.println("------------ Заявка не найдена ------------");
 
-            System.out.println("------------ Item fiend! ------------");
+            } else {
+
+
+                System.out.println("Имя заявки : " + tracker.findById(id).getName() + " Описание заявки : " + tracker.findById(id).getDescription() + " ID заявки " + id);
+
+                System.out.println("------------ Item fiend! ------------");
+            }
         }
 
         public String info() {
@@ -300,10 +338,17 @@ public class MenuTracker {
 
             String key = input.ask("Введите Имя заявки которую хотите найти : ");
 
+            if (tracker.findByName(key) == null) { // проверка на случай отсутствия заявки
 
-            System.out.println("Имя заявки : " + tracker.findByName(key).getName() + " Описание заявки : " + tracker.findByName(key).getDescription() + " ID заявки " + tracker.findByName(key).getId());
+                System.out.println("------------ Заявка не найдена ------------");
 
-            System.out.println("------------ Item fiend! ------------");
+            } else {
+
+
+                System.out.println("Имя заявки : " + tracker.findByName(key).getName() + " Описание заявки : " + tracker.findByName(key).getDescription() + " ID заявки " + tracker.findByName(key).getId());
+
+                System.out.println("------------ Item fiend! ------------");
+            }
         }
 
         public String info() {
