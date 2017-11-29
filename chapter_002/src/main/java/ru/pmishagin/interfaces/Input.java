@@ -18,6 +18,6 @@ public interface Input {
 
     String ask(String questeon);
 
-    int ask(String qiesteon, int[] range);
+    int ask(String questeon, int[] range);
 
 }

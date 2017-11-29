@@ -1,5 +1,6 @@
 package ru.pmishagin.start;
 
+import ru.pmishagin.interfaces.UserAction;
 import ru.pmishagin.models.*;
 import ru.pmishagin.interfaces.Input;
 
@@ -56,6 +57,27 @@ public class StartUI {
 
         MenuTracker menu = new MenuTracker(this.input, this.tracker);
         menu.fillActions();
+
+        UserAction deleteAction = new UserAction() {
+
+            @Override
+            public int key() {
+                return 7;
+            }
+
+            @Override
+            public void execute(Input input, Tracker tracker) {
+
+            }
+
+            @Override
+            public String info() {
+
+                return String.format("%s. %s", this.key(), "Delete(Anonim)");
+            }
+        };
+
+        menu.addAction(deleteAction);
 
         int[] ranges = menu.getRange();
 

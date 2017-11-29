@@ -20,7 +20,8 @@ public class MenuTracker {
 
     private Input input;
     private Tracker tracker;
-    private UserAction[] actions = new UserAction[7];
+    private UserAction[] actions = new UserAction[8];
+    private int position = 0;
 
     /**
      * Конструктор Menu
@@ -40,25 +41,31 @@ public class MenuTracker {
      *Массив для хранения значений для выявления ошибок!
      */
 
-    private int[] ranges = new int[] {0, 1, 2, 3, 4, 5, 6};
+    private int[] ranges = new int[] {0, 1, 2, 3, 4, 5, 6, 7};
 
     /**
      *Метод инициализурет ключи для команд в массиве actuions
      * Удобно его использовать для цикла
      */
 
-
-
     public void fillActions() {
 
-        this.actions[0] = new AddItem();
-        this.actions[1] = new MenuTracker.ShowItems();
-        this.actions[2] = new UpdateItem();
-        this.actions[3] = new Delete();
-        this.actions[4] = new FindItemById();
-        this.actions[5] = new FindItemByName();
-        this.actions[6] = new Exit();
+        this.actions[position++] = new AddItem();
+        this.actions[position++] = new MenuTracker.ShowItems();
+        this.actions[position++] = new UpdateItem();
+        this.actions[position++] = new Delete();
+        this.actions[position++] = new FindItemById();
+        this.actions[position++] = new FindItemByName();
+        this.actions[position++] = new Exit();
 
+    }
+    /**
+     * Метод добавляющий новые дейвствия в меню с помощью анонимных классов
+     */
+
+    public void addAction(UserAction action) {
+
+        this.actions[position++] = action;
     }
 
     /**
@@ -102,13 +109,25 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    private class AddItem implements UserAction {
+    private class AddItem extends BaseAction {
+
+        /**
+         *
+         * Переопределям конструткор Абстрактного класса
+         * В котором есть методы кей и инфо, а метод execute наследуется у интерфейса Useraction.
+         */
+
+        public AddItem() {
 
 
-        public int key() {
-
-            return 0;
+            super(0, "Add new Item");
         }
+
+
+        //public int key() {
+
+           // return 0;
+        //}
 
         public void execute(Input input, Tracker tracker) {
 
@@ -125,11 +144,11 @@ public class MenuTracker {
 
         }
 
-        public String info() {
+       // public String info() {
 
-            return String.format("%s. %s", this.key(), "Add new Item");
+           // return String.format("%s. %s", this.key(), "Add new Item");
 
-        }
+        //}
     }
     //////////////////////////////////////Class////////////////////////////
     /**
@@ -141,13 +160,15 @@ public class MenuTracker {
      * @info Выводит описывающую информацию  действия.
      *
      */
-    private static class ShowItems implements UserAction {
+    private static class ShowItems extends BaseAction {
 
+        public ShowItems() {
 
-        public int key() {
-
-            return 1;
+            super(1, "Show all Item");
         }
+
+
+
 
         public void execute(Input input, Tracker tracker) {
 
@@ -162,11 +183,7 @@ public class MenuTracker {
 
         }
 
-        public String info() {
 
-            return String.format("%s. %s", this.key(), "Show all Item");
-
-        }
     }
     //////////////////////////////////////Class////////////////////////////
     /**
@@ -178,12 +195,14 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    class UpdateItem implements UserAction {
+    class UpdateItem extends BaseAction {
 
-        public int key() {
+        public UpdateItem() {
 
-            return 2;
+            super(2, "Update Item");
         }
+
+
 
         public void execute(Input input, Tracker tracker) {
 
@@ -215,11 +234,6 @@ public class MenuTracker {
 
         }
 
-        public String info() {
-
-            return String.format("%s. %s", this.key(), "Update Item");
-
-        }
 
 
     }
@@ -233,12 +247,13 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    class Delete implements UserAction {
+    class Delete extends BaseAction {
 
-        public int key() {
+        public Delete() {
 
-            return 3;
+            super(3, "Delete Item");
         }
+
 
         public void execute(Input input, Tracker tracker) {
 
@@ -261,11 +276,6 @@ public class MenuTracker {
 
         }
 
-        public String info() {
-
-            return String.format("%s. %s", this.key(), "Delete Item");
-
-        }
 
 
     }
@@ -279,11 +289,11 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    class FindItemById implements UserAction {
+    class FindItemById extends BaseAction {
 
-        public int key() {
+        public FindItemById() {
 
-            return 4;
+            super(4, "Search by ID");
         }
 
         public void execute(Input input, Tracker tracker) {
@@ -306,11 +316,6 @@ public class MenuTracker {
             }
         }
 
-        public String info() {
-
-            return String.format("%s. %s", this.key(), "Search by ID");
-
-        }
 
 
     }
@@ -324,11 +329,11 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    class FindItemByName implements UserAction {
+    class FindItemByName extends BaseAction {
 
-        public int key() {
+        public FindItemByName() {
 
-            return 5;
+            super(5, "Search by Name");
         }
 
         public void execute(Input input, Tracker tracker) {
@@ -369,25 +374,17 @@ public class MenuTracker {
      * @info Выводит описывающую информацию.
      *
      */
-    class Exit implements UserAction {
+    class Exit extends BaseAction {
 
-        public int key() {
+        public Exit() {
 
-            return 6;
+            super(6,  "Exit");
         }
 
         public void execute(Input input, Tracker tracker) {
 
             System.out.println("------------ Escape program! ------------");
 
-
-        }
-
-
-
-        public String info() {
-
-            return String.format("%s. %s", this.key(), "Exit");
 
         }
 
