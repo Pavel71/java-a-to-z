@@ -1,8 +1,7 @@
-package ru.pmishagin.timetest;
+package ru.pmishagin.timecollection;
 
 import java.util.*;
 import org.junit.Test;
-import ru.pmishagin.timecollection.Time;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -17,7 +16,7 @@ public class TimeTest {
 
     @Test
 
-      public void whenWeAddSringInCollection() {
+    public void whenWeAddSringInCollection() {
 
 
         Time time = new Time();
@@ -44,34 +43,34 @@ public class TimeTest {
 
     }
 
-        @Test
+    @Test
 
-        public void whenWeDellFurstSringInCollection() {
+    public void whenWeDellFurstSringInCollection() {
 
-            Time time = new Time();
+        Time time = new Time();
 
-            List<String> arrlist = new ArrayList<>();
+        List<String> arrlist = new ArrayList<>();
 
-            List<String> linklist = new LinkedList<>();
+        List<String> linklist = new LinkedList<>();
 
-            Set<String> treeset = new TreeSet<>();
+        Set<String> treeset = new TreeSet<>();
 
-            time.add(arrlist, "Pepapppapapapapapa", 100000);
+        time.add(arrlist, "Pepapppapapapapapa", 100000);
 
-            time.add(linklist, "Pepapppapapapapapa", 100000);
+        time.add(linklist, "Pepapppapapapapapa", 100000);
 
-            time.add(treeset, "Pepapppapapapapapa", 100000);
+        time.add(treeset, "Pepapppapapapapapa", 100000);
 
-         long arr = time.delete(arrlist, 1000);
+        long arr = time.delete(arrlist, 1000);
 
-         long link = time.delete(linklist, 1000);
+        long link = time.delete(linklist, 1000);
 
-         long treset = time.delete(treeset, 1000);
+        long treset = time.delete(treeset, 1000);
 
-         boolean resultarrlink = link < arr ? true : false;
+        boolean resultarrlink = link < arr ? true : false;
 
-         assertThat(resultarrlink, is(true));
+        assertThat(resultarrlink, is(true));
 
-        }
+    }
 
 }
