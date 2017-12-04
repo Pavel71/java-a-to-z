@@ -17,6 +17,23 @@ public class ConvertListTest {
 
     @Test
 
+    public void whenlistarraysConvertList() {
+
+
+        List<int[]> list = new ArrayList<>();
+
+        list.add(new int[]{1, 2, 3});
+
+        list.add(new int[]{4, 5, 6, 7, 8});
+
+       List<Integer> test = new ConvertList().convert(list);
+
+       assertThat(test, is(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8)));
+
+    }
+
+    @Test
+
     public void whenWeConvertDoubleArraytoList() {
 
         int[][] arr = {

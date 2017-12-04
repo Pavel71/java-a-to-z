@@ -10,6 +10,37 @@ import java.util.*;
 public class ConvertList {
 
 
+    public static void main(String[] args) {
+
+
+
+
+    }
+
+
+    public List<Integer> convert(List<int[]> list) {
+
+        List<Integer> con = new ArrayList<>();
+
+
+        Iterator<int[]> itrc = list.iterator();
+
+        while (itrc.hasNext()) {
+
+
+            for (Integer ini : itrc.next()) {
+
+                con.add(ini);
+
+            }
+
+        }
+
+        return con;
+
+    }
+
+
     public List<Integer> toList(int[][] array) {
 
         List<Integer> list = new ArrayList<>();
