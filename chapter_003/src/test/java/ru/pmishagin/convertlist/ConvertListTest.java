@@ -5,6 +5,8 @@ import java.util.*;
 import org.junit.Test;
 
 import ru.pmishagin.convertlist.ConvertList;
+import ru.pmishagin.user.User;
+import ru.pmishagin.user.UserConvert;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -14,6 +16,21 @@ import static org.junit.Assert.assertThat;
  * @since 01.12.2017
  */
 public class ConvertListTest {
+
+
+    @Test
+
+    public void whenListConvertMapid() {
+
+        List<User> list = new ArrayList<>();
+
+        list.addAll(Arrays.asList(new User("Pavel", "Tula"), new User("Petr", "Tula"), new User("Pankrat", "Tula")));
+
+
+        assertThat(list.get(0), is(new UserConvert().process(list).get(1)));
+
+
+    }
 
     @Test
 
