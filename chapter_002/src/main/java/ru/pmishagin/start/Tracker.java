@@ -19,7 +19,7 @@ import java.util.*;
 
 public class Tracker {
 
-   private Item[] items = new Item[10]; /////Массив объектов Items Заменяет базу данных//////////
+   private List<Item> items = new ArrayList<>(); /////Массив объектов Items Заменяет базу данных//////////
    private int position = 0; ////////Это по сути накопение количества заявок или задач/////////
    private static final Random RN = new Random(); ////Cтатическая константа для генераци случаного айди/////
 
@@ -36,7 +36,7 @@ public class Tracker {
 
        item.setId(this.generateId()); ////////////Метод генерирует случайное число и переводит его в строку(ID)
 
-       this.items[position++] = item; /////////// Это идет наполнение массива
+       this.items.add(item); /////////// Это идет наполнение массива
 
        return item;
    }
@@ -83,7 +83,12 @@ public class Tracker {
      * @return
      */
 
-   public Item[] getAll() {
+   public List<Item>  getAll() {
+
+
+       return this.items;
+
+       /*
 
        Item[] result = new Item[position]; //Массив чистых заявок
 
@@ -94,7 +99,7 @@ public class Tracker {
                result[index] = this.items[index]; //присваиваем массив чистых завок нашей базе
            }
        }
-       return result;
+       return result; */
 
    }
 
@@ -105,12 +110,19 @@ public class Tracker {
 
    public void showAllItem() {
 
+
+       for (Item item : items) {
+
+           System.out.println(item);
+       }
+       /*
        for (int i = 0; i < position; i++) {
 
            System.out.println("------------ Все заявки --------------");
 
            System.out.println(" Name : " + items[i].getName() + " " + "Description: " + items[i].description + " " + "Id: " + items[i].getId());
        }
+       */
    }
 
     /**
@@ -120,6 +132,22 @@ public class Tracker {
 
    public void update(Item item) {
 
+
+       for (Item itemlist : items) {
+
+          if (itemlist.getId().equals(item.getId())) {
+
+
+              items.remove(itemlist);
+              items.add(item);
+
+              //itemlist = item;
+
+              break;
+          }
+       }
+       /*
+
        for (int index = 0; index < items.length; index++) {
 
            if (items[index].getId().equals(item.getId())) {
@@ -128,7 +156,7 @@ public class Tracker {
 
                break;
            }
-       }
+       } */
 
 
    }
@@ -140,6 +168,21 @@ public class Tracker {
 
     public void delete(Item item) {
 
+
+        ListIterator listr = items.listIterator();
+
+        while (listr.hasNext()) {
+
+            Item element = (Item) listr.next();
+
+            if (element.getId().equals(item.getId())) {
+
+                listr.remove();
+            }
+        }
+
+        /*
+
        for (int index = 0; index < items.length; index++) {
 
            if (items[index].getId().equals(item.getId())) {
@@ -149,7 +192,7 @@ public class Tracker {
                break;
            }
 
-       }
+       } */
     }
 
     /**
@@ -161,7 +204,21 @@ public class Tracker {
 
    public Item findByName(String key) {
 
-        Item result = null;
+       Item result = null;
+
+       for (Item element : items) {
+
+
+           if (element.name.equals(key)) {
+
+               result = element;
+               break;
+           }
+
+
+       }  return result;
+
+        /*
 
         for (int index = 0; index < items.length; index++) {
 
@@ -175,7 +232,7 @@ public class Tracker {
         }
         return result;
 
-
-    }
+         */
+   }
 
 }

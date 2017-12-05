@@ -23,7 +23,7 @@ public class TrackerTest {
 
         tracker.add(item1);
 
-        assertThat(tracker.getAll()[0], is(item1));
+        assertThat(tracker.getAll().get(0), is(item1));
 
 
     }
@@ -79,7 +79,7 @@ public class TrackerTest {
 
         tracker.delete(item1);
 
-        assertThat(null, is(tracker.getAll()[0]));
+        assertThat(true, is(tracker.getAll().isEmpty()));
 
 
     }
@@ -94,7 +94,7 @@ public class TrackerTest {
 
         tracker.add(item1);
 
-        assertThat(tracker.getAll()[0], is(tracker.findByName("Pupa")));
+        assertThat(tracker.getAll().get(0), is(tracker.findByName("Pupa")));
 
     }
 

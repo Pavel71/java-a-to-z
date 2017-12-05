@@ -4,6 +4,10 @@ import ru.pmishagin.models.*;
 
 import ru.pmishagin.interfaces.Input;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -36,7 +40,7 @@ public class StartUITest {
 
         new StartUI(input, tracker).init();     //   создаём StartUI и вызываем метод init()
 
-        assertThat(tracker.getAll()[0].getName(), is("test name")); // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
+        assertThat(tracker.getAll().get(0).getName(), is("test name")); // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
 
 
     }
@@ -59,7 +63,7 @@ public class StartUITest {
 
         new StartUI(input, tracker).init();
 
-        assertThat(tracker.findById(item1.getId()).getName(), is("test name"));
+        assertThat(tracker.getAll().get(0).getName(), is("test name"));
     }
 
     @Test
@@ -74,7 +78,8 @@ public class StartUITest {
 
         new StartUI(input, tracker).init();
 
-        assertThat(null, is(tracker.getAll()[0]));
+
+        assertThat(true, is(tracker.getAll().isEmpty()));
 
 
     }

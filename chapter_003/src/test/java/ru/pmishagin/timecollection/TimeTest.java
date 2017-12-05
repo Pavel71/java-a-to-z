@@ -27,11 +27,11 @@ public class TimeTest {
 
         Set<String> treeset = new TreeSet<>();
 
-        long arr = time.add(arrlist, "Pepapppapapapapapa", 10000);
+        long arr = time.add(arrlist, "Pepapppapapapapapa", 100000);
 
-        long link = time.add(linklist, "Pepapppapapapapapa", 10000);
+        long link = time.add(linklist, "Pepapppapapapapapa", 100000);
 
-        long treset = time.add(treeset, "Pepapppapapapapapa", 10000);
+        long treset = time.add(treeset, "Pepapppapapapapapa", 1000);
 
         boolean resultlinkarr = link < arr ? true : false;
 
