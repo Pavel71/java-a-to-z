@@ -29,7 +29,7 @@ public class TimeTest {
 
         long arr = time.add(arrlist, "Pepapppapapapapapa", 1000000);
 
-        long link = time.add(linklist, "Pepapppapapapapapa", 100000);
+        long link = time.add(linklist, "Pepapppapapapapapa", 10000);
 
         long treset = time.add(treeset, "Pepapppapapapapapa", 1000);
 
