@@ -146,7 +146,7 @@ public class MenuTracker {
 
        // public String info() {
 
-           // return String.format("%s. %s", this.key(), "Add new Item");
+           // return String.format("%services. %services", this.key(), "Add new Item");
 
         //}
     }
@@ -176,7 +176,7 @@ public class MenuTracker {
 
             for (Item item : tracker.getAll()) {
 
-                System.out.println(String.format("%s. %s. %s", "Name item : " + item.getName(), "Desc item : " + item.getDescription(), "ID item : " + item.getId()));
+                System.out.println(String.format("%services. %services. %services", "Name item : " + item.getName(), "Desc item : " + item.getDescription(), "ID item : " + item.getId()));
 
 
             }
@@ -358,7 +358,7 @@ public class MenuTracker {
 
         public String info() {
 
-            return String.format("%s. %s", this.key(), "Search by Name");
+            return String.format("%services. %services", this.key(), "Search by Name");
 
         }
 

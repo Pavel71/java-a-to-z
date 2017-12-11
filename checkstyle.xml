@@ -57,7 +57,7 @@
         <!-- Modifier Checks                                    -->
         <!-- See http://checkstyle.sf.net/config_modifiers.html -->
 
-        <!-- Checks for blocks. You know, those {}'s         -->
+        <!-- Checks for blocks. You know, thoseserviservis{}'s         -->
         <!-- See http://checkstyle.sf.net/config_blocks.html -->
         <module name="AvoidNestedBlocks"/>
         <module name="EmptyBlock"/>

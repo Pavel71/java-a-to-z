@@ -1,0 +1,18 @@
+<project>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pmishagin</groupId>
+    <artifactId>chapter_004</artifactId>
+    <packaging>jar</packaging>
+    <version> 1.0</version>
+
+    <parent>
+        <groupId>pmishagin</groupId>
+        <artifactId>java-a-to-z</artifactId>
+        <version>1.0</version>
+    </parent>
+
+
+
+
+</project>

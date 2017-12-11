@@ -3,11 +3,8 @@ package ru.pmishagin.convertlist;
 
 import java.util.*;
 import org.junit.Test;
-
-import ru.pmishagin.convertlist.ConvertList;
 import ru.pmishagin.user.User;
 import ru.pmishagin.user.UserConvert;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 /**

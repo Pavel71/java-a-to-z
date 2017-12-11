@@ -73,7 +73,7 @@ public class StartUI {
             @Override
             public String info() {
 
-                return String.format("%s. %s", this.key(), "Delete(Anonim)");
+                return String.format("%services. %services", this.key(), "Delete(Anonim)");
             }
         };
 
