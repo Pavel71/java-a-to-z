@@ -28,12 +28,48 @@ public class PrimeNumbersIterator {
     }
 
     /**
+     * Метод возвращает true или false
+     * Если число простое.
+     */
+
+    public boolean primenumber(int i) {
+
+        for (int j = 2; j < i; j++) {
+
+            if (i % j == 0) {
+
+                return false;
+
+            }
+
+        } return true;
+
+    }
+
+
+    /**
      * Метод начинает отсчет от последней итерации полсе некста
      * И ищет есть ли еще простое число впереди!
      *
      * @return
      */
 
+
+    public boolean hasNext() {
+
+
+          for (int primehesnext = index; primehesnext < values.length; primehesnext++) {
+
+              int number = values[primehesnext];
+
+
+              if (primenumber(number)) {
+
+                  return true;
+              }
+
+          } return false;
+    }
 
 
     /**
@@ -45,17 +81,43 @@ public class PrimeNumbersIterator {
      * @throws
      */
 
-    public Object next() {
+    public Object next() throws RuntimeException {
 
 
-            for (int j = 2; j < values[index]; j++) {
 
-                while (values[index] % j == 0) {
+            while (index < values.length) {
 
-                    index++;
+                int prime = values[index++];
+
+                if (primenumber(prime)) {
+
+                    return prime;
                 }
 
-            } return values[index++];
+            } throw new NoSuchElementException("Prime not found");
 
+
+
+        /*
+
+        int prime = values[index++];
+
+        if (primenumber(prime)) {
+
+            return prime;
+
+        } else {
+
+            try {
+
+                return next();
+
+            } catch (ArrayIndexOutOfBoundsException a) {
+
+                throw new
+            }
+        }*/
     }
+
+
 }

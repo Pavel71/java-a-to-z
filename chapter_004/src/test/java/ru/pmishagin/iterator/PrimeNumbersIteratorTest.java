@@ -20,15 +20,35 @@ public class PrimeNumbersIteratorTest {
 
     public void whenweSearcPrimeNumbersNext() {
 
-        int[] arr = new int[]{4, 2, 3, 5, 2, 4, 7, 8, 9, 10};
+        int[] arr = new int[]{4, 4, 1, 6, 4};
 
         PrimeNumbersIterator itr = new PrimeNumbersIterator(arr);
 
-
+        itr.next();
 
         int result = (Integer) itr.next();
 
-        assertThat(result, is(2));
+        assertThat(result, is(1));
+
+    }
+
+    @Test
+
+    public void whenWeSearchElementPrimehasNext() {
+
+        PrimeNumbersIterator itr = new PrimeNumbersIterator(new int[] {1, 7, 9, 4, 3, 9, 4});
+
+        itr.next();
+        itr.next();
+        itr.next();
+
+
+       boolean result = itr.hasNext();
+
+
+        assertThat(result, is(false));
+
+
 
     }
 

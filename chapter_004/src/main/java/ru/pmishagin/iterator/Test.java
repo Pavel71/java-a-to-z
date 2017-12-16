@@ -1,5 +1,7 @@
 package ru.pmishagin.iterator;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -11,57 +13,50 @@ import java.util.NoSuchElementException;
  */
 public class Test {
 
+    private List<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        int[] arr = new int[]{1, 2, 3, 4, 5, -1, -2, 8, 9, 10};
-
-        //System.out.println(prime(arr));
 
         Test test = new Test();
 
-        System.out.println(test.ifreturn(3));
+        for (int i = 1; i < 100; i++) {
 
+            if (test.primenumber(i)) {
 
-    }
-
-    public static List<Integer> prime(int[] arr) {
-
-        List<Integer> primelist = new ArrayList<>();
-
-
-        for (int i = 0; i < arr.length; i++) {
-
-            boolean prime = true;
-
-
-            for (int j = 2; j < arr[i]; j++) {
-
-                if (arr[i] % j == 0) {
-
-                    prime = false;
-
-                }
-
-            }  if (prime) {
-
-                primelist.add(arr[i]);
+                test.list.add(i);
             }
 
-        } return primelist;
+        }
+
+
+
+
+        System.out.println(test.list);
 
 
     }
 
-    public  int ifreturn(int x) {
 
-        int result = 0;
+    public boolean primenumber(int i) {
 
-        for (int i = 0; i < 3; i++) {
+        for (int j = 2; j < i; j++) {
 
-            result = i + x;
+            if (i % j == 0) {
 
-        } return x + 3;
+               return false;
+
+            }
+
+        } return true;
 
     }
+
+    public List<Integer> getList() {
+
+        return this.list;
+    }
+
+
+
 }
