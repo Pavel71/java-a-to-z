@@ -55,6 +55,21 @@ public class EvenNumberIterator {
     }
 
     /**
+     * Меод проверки числа на четность
+     */
+
+    public int evennumbers() {
+
+            while (values[index] % 2 == 1) {
+
+                index++;
+
+            }
+
+        return values[index++];
+    }
+
+    /**
      *Метод возвращает только четные значения
      * Если цикл не попадает на четное то просто прибавляем к индексу!
      * Здесь реализован вызов самого же себя
@@ -64,27 +79,22 @@ public class EvenNumberIterator {
 
     public Object next() throws RuntimeException {
 
-
-        if (values[index] % 2 != 1) {
-
-            return values[index++];
-
-
-        } else if (values[index] % 2 != 0) {
-
-            index++;
-
-        }
         try {
 
-            return next(); //Запускаем заново метод пока не вернем true или false
-                           //Ловим ошибку массива и перепрофилируем ее в нет четного числа
+            while (values[index] % 2 == 1) {
+
+                index++;
+
+            }
 
         } catch (ArrayIndexOutOfBoundsException e) {
 
 
             throw new NoSuchElementException("Not found Even Numbers!");
         }
+
+        return values[index++];
+
     }
 }
 

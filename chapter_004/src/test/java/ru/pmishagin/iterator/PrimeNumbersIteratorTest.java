@@ -24,7 +24,6 @@ public class PrimeNumbersIteratorTest {
 
         PrimeNumbersIterator itr = new PrimeNumbersIterator(arr);
 
-        itr.next();
 
         int result = (Integer) itr.next();
 

@@ -22,6 +22,7 @@ public class EvenNumberIteratorTest {
         EvenNumberIterator itr = new EvenNumberIterator(new int[] {2, 13, 11, 5, 12, 5, 7});
 
         itr.next();
+
         int result = (Integer) itr.next();
 
         assertThat(result, is(12));
