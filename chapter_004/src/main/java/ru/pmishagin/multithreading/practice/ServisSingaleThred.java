@@ -9,6 +9,8 @@ public class ServisSingaleThred {
 
     private boolean needdoSamfing;
 
+    int i = 0;
+
 
     public void run() throws InterruptedException {
 
@@ -16,7 +18,9 @@ public class ServisSingaleThred {
 
             if (needdoSamfing) {
 
+                i++; //Это просто для заполнения блока
 
+                 //Todo
                 // dosomfing();
             }
             Thread.sleep(10000);

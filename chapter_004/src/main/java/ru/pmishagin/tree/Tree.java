@@ -25,8 +25,12 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
                 root = node;
                 root.childen.add(new Node<E>(child));
                 return true;
-            } else insertRec(root, node, new Node<E>(child));
+            } else {
+
+                insertRec(root, node, new Node<E>(child));
+            }
             return true;
+
         } catch (Exception exception) {
             return false;
         }
@@ -94,21 +98,20 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
         Node<E> left, right;
         List<Node<E>> childen;
 
-        /**
-         * Constructor.
-         * @param e - new value.
-         */
-        Node(E e) {
+
+       public Node(E e) {
             this.value = e;
-            left = right = null;
+            left = right;
+            right = null;
             childen = new LinkedList<>();
-        }
+       }
 
         /**
          * Get value.
          * @return - parent.
          */
         public E getValue() {
+
             return this.value;
         }
     }

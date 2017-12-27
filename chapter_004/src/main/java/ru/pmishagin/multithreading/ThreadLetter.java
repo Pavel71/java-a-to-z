@@ -54,6 +54,8 @@ public class ThreadLetter extends Thread {
 
                 System.out.println(element);
 
+                count++;
+
 
             }
         }

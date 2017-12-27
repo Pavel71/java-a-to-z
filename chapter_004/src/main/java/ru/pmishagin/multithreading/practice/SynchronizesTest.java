@@ -13,15 +13,19 @@ package ru.pmishagin.multithreading.practice;
  */
 public class SynchronizesTest {
 
+    int i = 0;
+
     private boolean canwork = true; //Либо делаем эту переменную volatile.Это означает что если идет изменение
                                     // то сначало меняем, потом читаем!
 
     public void dowork() {          //Или делаем 2 метода Synchronized.Тогда методы пропускаю по 1 потоку.
                                     //1 вышедший из Синхрона вносит изменения, которые сразу доступны другим потокам
 
-        if(canwork) {
+        if (canwork) {
 
-            //doSamthing
+            i++; //Просто так
+
+            //TODO
         }
     }
 
