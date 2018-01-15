@@ -34,7 +34,7 @@ public class Test {
 
                 index++;
 
-                if (thread1.getTime() > 10000000) {
+                if (thread1.getTime() > 1000000000) {
 
                     thread1.interrupt();
                 }

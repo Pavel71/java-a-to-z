@@ -1,5 +1,8 @@
 package ru.pmishagin.multithreading.userstoreage;
 
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +11,11 @@ import java.util.List;
  * @version 0.1
  * @since 04.01.2018
  */
-public class UserStoreage {
 
+@ThreadSafe
+
+public class UserStoreage {
+@GuardedBy("this")
   private final List<User> listuser = new ArrayList<>();
 
   public List<User> getListuser() {
