@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -25,7 +26,7 @@ public class MyFileVisitorParallSearch extends SimpleFileVisitor<Path> {
 
     private List<String> resultList = new ArrayList<>();
 
-    private HashMap<Path, List<String>> map = new HashMap<>();
+    private ConcurrentHashMap<Path, List<String>> map = new ConcurrentHashMap<>();
 
 
     public MyFileVisitorParallSearch(String extc) {
@@ -35,7 +36,7 @@ public class MyFileVisitorParallSearch extends SimpleFileVisitor<Path> {
 
     }
 
-    public HashMap<Path, List<String>> getMap() {
+    public ConcurrentHashMap<Path, List<String>> getMap() {
 
         return map;
     }

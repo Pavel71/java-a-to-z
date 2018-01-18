@@ -1,11 +1,9 @@
-package ru.pmishagin.set;
+package ru.pmishagin.collection.set;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 

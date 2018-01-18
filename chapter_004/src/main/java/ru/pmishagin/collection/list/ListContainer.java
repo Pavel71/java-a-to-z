@@ -1,7 +1,4 @@
-package ru.pmishagin.list;
-
-import java.util.ArrayList;
-import java.util.List;
+package ru.pmishagin.collection.list;
 
 /**
  * @author Pavel Mishagin (mailto:raz_3@mail.ru)

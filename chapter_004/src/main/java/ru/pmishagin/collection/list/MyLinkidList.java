@@ -1,4 +1,4 @@
-package ru.pmishagin.list;
+package ru.pmishagin.collection.list;
 
 import java.util.Iterator;
 

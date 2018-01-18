@@ -1,6 +1,8 @@
-package ru.pmishagin.iterator;
+package ru.pmishagin.collection;
 
 import org.junit.Test;
+import ru.pmishagin.collection.iterator.ConvertIterator;
+import ru.pmishagin.collection.iterator.ConvertIterator;
 
 import java.util.ArrayList;
 import java.util.Arrays;

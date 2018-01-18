@@ -11,7 +11,7 @@ public class MainTest {
 
         String dir = "C:";
 
-        String text = "MyFileVisitorParallSearch";
+        String text = "Налогоплатильщик";
 
         String extc = "java";
 
@@ -42,11 +42,7 @@ public class MainTest {
             System.out.println(element);
         }
 
-
         System.out.println(finishTime);
-
-
-
 
 
     }

@@ -1,13 +1,11 @@
-package ru.pmishagin.iterator;
+package ru.pmishagin.collection;
 
 import org.junit.Test;
-
-import java.util.Iterator;
+import ru.pmishagin.collection.iterator.PrimeNumbersIterator;
+import ru.pmishagin.collection.iterator.PrimeNumbersIterator;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Pavel Mishagin (mailto:raz_3@mail.ru)

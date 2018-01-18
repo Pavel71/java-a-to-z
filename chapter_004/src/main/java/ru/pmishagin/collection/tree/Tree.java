@@ -1,6 +1,4 @@
-package ru.pmishagin.tree;
-
-import ru.pmishagin.set.SimpleSet;
+package ru.pmishagin.collection.tree;
 
 import java.util.Iterator;
 import java.util.LinkedList;

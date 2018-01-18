@@ -1,8 +1,9 @@
-package ru.pmishagin.iterator;
+package ru.pmishagin.collection;
 
 import org.junit.Test;
+import ru.pmishagin.collection.iterator.DoubleArrayIterator;
+import ru.pmishagin.collection.iterator.DoubleArrayIterator;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 import static org.hamcrest.core.Is.is;

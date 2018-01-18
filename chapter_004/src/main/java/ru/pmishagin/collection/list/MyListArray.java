@@ -1,4 +1,4 @@
-package ru.pmishagin.list;
+package ru.pmishagin.collection.list;
 
 /**
  * @author Pavel Mishagin (mailto:raz_3@mail.ru)

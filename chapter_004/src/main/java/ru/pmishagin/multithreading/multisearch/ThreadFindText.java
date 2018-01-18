@@ -56,45 +56,23 @@ public class ThreadFindText extends Thread {
 
         for (Path path : myfl.getMap().keySet()) {
 
-                for (String element : myfl.getMap().get(path)) {
+            for (String element : myfl.getMap().get(path)) {
 
 
-                    Pattern pfind = Pattern.compile("\\b" + text + "\\b");
-                    Matcher mfind = pfind.matcher(element);
+                Pattern pfind = Pattern.compile("\\b" + text + "\\b");
+                Matcher mfind = pfind.matcher(element);
 
-                    if (mfind.find()) {
+                if (mfind.find()) {
 
 
-                        myfl.getResultlist().add(String.valueOf(path));
-                        break;
-
-                    }
+                    myfl.getResultlist().add(String.valueOf(path));
+                    break;
 
                 }
+
             }
+        }
 
-
-
-
-
-
-
-//        for (List<String> list : myfl.getMap().values()) {
-//
-//            for (String element : list) {
-//
-//                Pattern pfind = Pattern.compile("\\b" + text + "\\b");
-//                Matcher mfind = pfind.matcher(element);
-//
-//                if (mfind.find()) {
-//
-//                    resultList.add(String.valueOf(path));
-//                    break;
-//
-//                }
-//            }
-//
-//        }
 
     }
 }

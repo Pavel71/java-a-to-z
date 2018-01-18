@@ -1,4 +1,4 @@
-package ru.pmishagin.map;
+package ru.pmishagin.collection.map;
 
 import java.util.Calendar;
 

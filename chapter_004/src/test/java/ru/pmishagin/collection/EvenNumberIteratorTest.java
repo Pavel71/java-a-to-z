@@ -1,9 +1,8 @@
-package ru.pmishagin.iterator;
+package ru.pmishagin.collection;
 
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.Iterator;
+import ru.pmishagin.collection.iterator.EvenNumberIterator;
+import ru.pmishagin.collection.iterator.EvenNumberIterator;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

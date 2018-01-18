@@ -1,6 +1,4 @@
-package ru.pmishagin.tree;
-
-import java.util.Optional;
+package ru.pmishagin.collection.tree;
 
 /**
  * @author Pavel Mishagin (mailto:raz_3@mail.ru)

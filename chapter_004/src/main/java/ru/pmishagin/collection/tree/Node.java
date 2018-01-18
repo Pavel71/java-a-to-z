@@ -1,4 +1,4 @@
-package ru.pmishagin.tree;
+package ru.pmishagin.collection.tree;
 
 import java.util.ArrayList;
 import java.util.List;
